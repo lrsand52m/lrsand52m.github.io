@@ -15,12 +15,24 @@
   <entry>
     <title><![CDATA[hexo+next之给博客加上萌妹子或者萌宠]]></title>
     <url>%2F2018%2F06%2F04%2Fhexo-next%E4%B9%8B%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%8A%A0%E4%B8%8A%E8%90%8C%E5%A6%B9%E5%AD%90%E6%88%96%E8%80%85%E8%90%8C%E5%AE%A0%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[编写中]]></content>
+      <categories>
+        <category>博客</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[C语言实现三子棋(井字棋)游戏]]></title>
     <url>%2F2018%2F06%2F04%2FC%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0%E4%B8%89%E5%AD%90%E6%A3%8B-%E4%BA%95%E5%AD%97%E6%A3%8B-%E6%B8%B8%E6%88%8F%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[正在编写]]></content>
+      <categories>
+        <category>C语言</category>
+      </categories>
+      <tags>
+        <tag>游戏</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[C语言实现扫雷游戏]]></title>

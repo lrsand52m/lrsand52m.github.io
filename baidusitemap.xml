@@ -4,6 +4,46 @@
 
     
   <url>
+    <loc>http://yoursite.com/2018/06/04/hexo-next%E4%B9%8B%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%8A%A0%E4%B8%8A%E8%90%8C%E5%A6%B9%E5%AD%90%E6%88%96%E8%80%85%E8%90%8C%E5%AE%A0/</loc>
+    <lastmod>2018-06-04T09:03:38.530Z</lastmod>
+    <data>
+        <display>
+        <title>hexo+next之给博客加上萌妹子或者萌宠</title>
+        <pubTime>2018-06-04T04:49:17.000Z</pubTime>
+        
+        <tag>博客</tag>
+         
+         
+           
+             
+              <breadCrumb title="博客" url="http://yoursite.com/categories/%E5%8D%9A%E5%AE%A2/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/06/04/C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0%E4%B8%89%E5%AD%90%E6%A3%8B-%E4%BA%95%E5%AD%97%E6%A3%8B-%E6%B8%B8%E6%88%8F/</loc>
+    <lastmod>2018-06-04T09:03:24.944Z</lastmod>
+    <data>
+        <display>
+        <title>C语言实现三子棋(井字棋)游戏</title>
+        <pubTime>2018-06-04T04:48:33.000Z</pubTime>
+        
+        <tag>游戏</tag>
+         
+         
+           
+             
+              <breadCrumb title="C语言" url="http://yoursite.com/categories/C%E8%AF%AD%E8%A8%80/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2018/06/04/C%E8%AF%AD%E8%A8%80%E5%B0%8F%E9%A1%B9%E7%9B%AE%E4%B9%8B%E6%B3%A8%E9%87%8A%E8%BD%AC%E6%8D%A2C-Cpp/</loc>
     <lastmod>2018-06-04T08:44:01.502Z</lastmod>
     <data>
@@ -21,36 +61,6 @@
              
               <breadCrumb title="项目" url="http://yoursite.com/categories/C%E8%AF%AD%E8%A8%80/%E9%A1%B9%E7%9B%AE/"/>
           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2018/06/04/hexo-next%E4%B9%8B%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%8A%A0%E4%B8%8A%E8%90%8C%E5%A6%B9%E5%AD%90%E6%88%96%E8%80%85%E8%90%8C%E5%AE%A0/</loc>
-    <lastmod>2018-06-04T04:49:17.590Z</lastmod>
-    <data>
-        <display>
-        <title>hexo+next之给博客加上萌妹子或者萌宠</title>
-        <pubTime>2018-06-04T04:49:17.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2018/06/04/C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0%E4%B8%89%E5%AD%90%E6%A3%8B-%E4%BA%95%E5%AD%97%E6%A3%8B-%E6%B8%B8%E6%88%8F/</loc>
-    <lastmod>2018-06-04T04:48:33.929Z</lastmod>
-    <data>
-        <display>
-        <title>C语言实现三子棋(井字棋)游戏</title>
-        <pubTime>2018-06-04T04:48:33.000Z</pubTime>
-        
-         
-           
         </display>
     </data>
     </url>
