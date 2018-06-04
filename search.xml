@@ -15,7 +15,7 @@
   <entry>
     <title><![CDATA[hexo+next之给博客加上萌妹子或者萌宠]]></title>
     <url>%2F2018%2F06%2F04%2Fhexo-next%E4%B9%8B%E7%BB%99%E5%8D%9A%E5%AE%A2%E5%8A%A0%E4%B8%8A%E8%90%8C%E5%A6%B9%E5%AD%90%E6%88%96%E8%80%85%E8%90%8C%E5%AE%A0%2F</url>
-    <content type="text"><![CDATA[编写中]]></content>
+    <content type="text"><![CDATA[今天我将详细说明如何在自己的博客里加入萌宠或者萌妹子工具:1.hexo+git pages搭建的博客2.live2d资源包 获取在博客站点路径git bash here然后输入以下代码让你获得相关的支持1npm install --save hexo-helper-live2d 然后就是看下面的图片选择你喜欢的注：角色图片不全，因为作者是不断更新的，建议直接访问作者的git仓库找更多角色地址：https://github.com/xiazeyu/live2d-widget-models然后记住你的角色名 输入下面的代码1npm install live2d-widget-model-你选的角色名 就获取完毕了 配置在站点的 _ config.yml 下配置1234567891011live2d: enable: true scriptFrom: local model: use: live2d-widget-model-你选的角色名 display: position: right width: 150 height: 300 mobile: show: false 上面的mobile选项决定是否在手机上展示动漫形象我的建议是不要开启，会挡住屏幕当然你如果一定要开，把show改为true即可]]></content>
       <categories>
         <category>博客</category>
       </categories>

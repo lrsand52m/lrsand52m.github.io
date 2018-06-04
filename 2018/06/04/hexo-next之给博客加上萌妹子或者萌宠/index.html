@@ -95,18 +95,23 @@
 
 
 
-<meta name="description" content="编写中">
+<meta name="description" content="今天我将详细说明如何在自己的博客里加入萌宠或者萌妹子工具:1.hexo+git pages搭建的博客2.live2d资源包">
 <meta name="keywords" content="博客">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo+next之给博客加上萌妹子或者萌宠">
 <meta property="og:url" content="http://yoursite.com/2018/06/04/hexo-next之给博客加上萌妹子或者萌宠/index.html">
 <meta property="og:site_name" content="LRS&#39;s Blog">
-<meta property="og:description" content="编写中">
+<meta property="og:description" content="今天我将详细说明如何在自己的博客里加入萌宠或者萌妹子工具:1.hexo+git pages搭建的博客2.live2d资源包">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-04T09:03:38.530Z">
+<meta property="og:image" content="http://yoursite.com/img/wanko1.png">
+<meta property="og:image" content="http://yoursite.com/img/wanko2.png">
+<meta property="og:image" content="http://yoursite.com/img/wanko3.png">
+<meta property="og:image" content="http://yoursite.com/img/wanko4.png">
+<meta property="og:updated_time" content="2018-06-04T12:14:30.645Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo+next之给博客加上萌妹子或者萌宠">
-<meta name="twitter:description" content="编写中">
+<meta name="twitter:description" content="今天我将详细说明如何在自己的博客里加入萌宠或者萌妹子工具:1.hexo+git pages搭建的博客2.live2d资源包">
+<meta name="twitter:image" content="http://yoursite.com/img/wanko1.png">
 
 
 
@@ -405,7 +410,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  3 字
+                  269 字
                 </span>
               
 
@@ -445,7 +450,12 @@
       
 
       
-        <p>编写中</p>
+        <p>今天我将详细说明如何在自己的博客里加入萌宠或者萌妹子<br>工具:<br>1.hexo+git pages搭建的博客<br>2.live2d资源包<br><a id="more"></a></p>
+<h1 id="获取"><a href="#获取" class="headerlink" title="获取"></a>获取</h1><p>在博客站点路径git bash here然后输入以下代码<br>让你获得相关的支持<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure></p>
+<p>然后就是看下面的图片选择你喜欢的<br><img src="/img/wanko1.png" alt=""><br><img src="/img/wanko2.png" alt=""><br><img src="/img/wanko3.png" alt=""><br><img src="/img/wanko4.png" alt=""><br>注：角色图片不全，因为作者是不断更新的，建议直接访问作者的git仓库找更多角色<br>地址：<a href="https://github.com/xiazeyu/live2d-widget-models" target="_blank" rel="noopener">https://github.com/xiazeyu/live2d-widget-models</a><br>然后记住你的角色名  输入下面的代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install live2d-widget-model-你选的角色名</span><br></pre></td></tr></table></figure></p>
+<p>就获取完毕了</p>
+<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><p>在站点的 _ config.yml 下配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">live2d:</span><br><span class="line">  enable: true</span><br><span class="line">  scriptFrom: local</span><br><span class="line">  model:</span><br><span class="line">    use: live2d-widget-model-你选的角色名</span><br><span class="line">  display:</span><br><span class="line">    position: right</span><br><span class="line">    width: 150</span><br><span class="line">    height: 300</span><br><span class="line">  mobile:</span><br><span class="line">    show: false</span><br></pre></td></tr></table></figure></p>
+<p>上面的mobile选项决定是否在手机上展示动漫形象我的建议是不要开启，会挡住屏幕<br>当然你如果一定要开，把show改为true即可</p>
 
       
     </div>
@@ -580,8 +590,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -820,6 +839,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#获取"><span class="nav-number">1.</span> <span class="nav-text">获取</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置"><span class="nav-number">2.</span> <span class="nav-text">配置</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -848,7 +883,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">16.5k</span>
+    <span title="Site words total count">16.8k</span>
   
 </div>
 <div class="powered-by">
