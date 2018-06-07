@@ -1,15 +1,3 @@
-header {
-  width: 90% !important;
-}
-header.post-header {
-  width: auto !important;
-}
-.container .main-inner {
-  width: 90%;
-}
-.content-wrap {
-  width: calc(100% - 260px);
-}
 /* normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif; /* 1 */
@@ -1845,7 +1833,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #529591;
+  background: #2f478f;
 }
 .links-of-blogroll {
   font-size: 13px;
