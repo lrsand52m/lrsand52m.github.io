@@ -189,7 +189,7 @@ body {
   font-size: 14px;
   line-height: 2;
   color: #555;
-  background: #d2b48c;
+  background: #eee;
 }
 @media (max-width: 767px) {
   body {
@@ -1833,7 +1833,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #121f98;
+  background: #42bd91;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2693,8 +2693,8 @@ pre .javascript .function {
   position: static;
   float: left;
   margin-top: 300px;
-  width: 420px;
-  background: #d2b48c;
+  width: 240px;
+  background: #eee;
   box-shadow: none;
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -3049,15 +3049,15 @@ pre .javascript .function {
 }
 .post-body h1 {
   font-size: 1.6em;
-  border-bottom: 1px solid #d2b48c;
+  border-bottom: 1px solid #eee;
 }
 .post-body h2 {
   font-size: 1.45em;
-  border-bottom: 1px solid #d2b48c;
+  border-bottom: 1px solid #eee;
 }
 .post-body h3 {
   font-size: 1.3em;
-  border-bottom: 1px dotted #d2b48c;
+  border-bottom: 1px dotted #eee;
 }
 .post-body h4 {
   font-size: 1.2em;
