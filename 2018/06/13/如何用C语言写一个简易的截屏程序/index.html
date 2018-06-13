@@ -82,7 +82,7 @@
 
 
 
-  <meta name="keywords" content="自定义类型," />
+  <meta name="keywords" content="小工具," />
 
 
 
@@ -95,21 +95,18 @@
 
 
 
-<meta name="description" content="一、结构体类型的创建 1.结构体是一些值的集合，这些值称为成员变量。  2.结构体内的成员可以是不同类型的变量，也可以是标量，数组，指针甚至是其他的结构体。">
-<meta name="keywords" content="自定义类型">
+<meta name="description" content="某天当我写完了鼠标连点器之后，鹏哥问我能不能写个截屏工具出来，当时我那叫一个···">
+<meta name="keywords" content="小工具">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于自定义类型">
-<meta property="og:url" content="http://yoursite.com/2018/05/28/关于自定义类型/index.html">
+<meta property="og:title" content="如何用C语言写一个简易的截屏程序">
+<meta property="og:url" content="http://yoursite.com/2018/06/13/如何用C语言写一个简易的截屏程序/index.html">
 <meta property="og:site_name" content="LRS&#39;s Blog">
-<meta property="og:description" content="一、结构体类型的创建 1.结构体是一些值的集合，这些值称为成员变量。  2.结构体内的成员可以是不同类型的变量，也可以是标量，数组，指针甚至是其他的结构体。">
+<meta property="og:description" content="某天当我写完了鼠标连点器之后，鹏哥问我能不能写个截屏工具出来，当时我那叫一个···">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://yoursite.com/img/jiegouti.png">
-<meta property="og:image" content="http://yoursite.com/img/yinyong.png">
-<meta property="og:updated_time" content="2018-05-28T10:49:56.917Z">
+<meta property="og:updated_time" content="2018-06-13T12:09:38.751Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于自定义类型">
-<meta name="twitter:description" content="一、结构体类型的创建 1.结构体是一些值的集合，这些值称为成员变量。  2.结构体内的成员可以是不同类型的变量，也可以是标量，数组，指针甚至是其他的结构体。">
-<meta name="twitter:image" content="http://yoursite.com/img/jiegouti.png">
+<meta name="twitter:title" content="如何用C语言写一个简易的截屏程序">
+<meta name="twitter:description" content="某天当我写完了鼠标连点器之后，鹏哥问我能不能写个截屏工具出来，当时我那叫一个···">
 
 
 
@@ -139,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/05/28/关于自定义类型/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/06/13/如何用C语言写一个简易的截屏程序/"/>
 
 
 
 
 
-  <title>关于自定义类型 | LRS's Blog</title>
+  <title>如何用C语言写一个简易的截屏程序 | LRS's Blog</title>
   
 
 
@@ -316,7 +313,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/28/关于自定义类型/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/13/如何用C语言写一个简易的截屏程序/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="LRSand52M">
@@ -333,7 +330,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">关于自定义类型</h1>
+          <h1 class="post-title" itemprop="name headline">如何用C语言写一个简易的截屏程序</h1>
         
 
         <div class="post-meta">
@@ -345,8 +342,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-28T15:52:01+08:00">
-                2018-05-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-13T19:06:38+08:00">
+                2018-06-13
               </time>
             
 
@@ -385,7 +382,7 @@
 
           
 			
-			<span id="/2018/05/28/关于自定义类型/" class="leancloud_visitors" data-flag-title="关于自定义类型">
+			<span id="/2018/06/13/如何用C语言写一个简易的截屏程序/" class="leancloud_visitors" data-flag-title="如何用C语言写一个简易的截屏程序">
 			&nbsp; | &nbsp;
 			<span class="post-meta-item-icon">
 			<i class="fa fa-eye"></i>
@@ -408,7 +405,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,094 字
+                  1,817 字
                 </span>
               
 
@@ -424,7 +421,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  4 分钟
+                  9 分钟
                 </span>
               
             </div>
@@ -448,69 +445,9 @@
       
 
       
-        <h1 id="一、结构体类型的创建"><a href="#一、结构体类型的创建" class="headerlink" title="一、结构体类型的创建"></a>一、结构体类型的创建</h1><ul>
-<li><p>1.结构体是一些值的集合，这些值称为成员变量。</p>
-</li>
-<li><p>2.结构体内的成员可以是不同类型的变量，也可以是标量，数组，指针甚至是其他的结构体。</p>
-<a id="more"></a></li>
-<li><p>3.结构体的创建：</p>
-</li>
-<li><p>例图：</p>
-</li>
-</ul>
-<p><img src="/img/jiegouti.png" alt=""></p>
-<ul>
-<li><p>4.结构体内部成员的访问：（1）.结构体变量访问成员(结构变量的成员是通过点操作符(.)访问的.点操作符接受两个操作数.如果s是结构体的具体名称，age是其内部成员，则s.age就可以访问)。（2）结构体访问指向变量的成员（定义一个指向该结构体的结构体类型的指针ps，如果age是该结构体的内部成员，则(*s).age或者ps-&gt;age就可以访问）。</p>
-</li>
-<li><p>5.结构的自引用：在结构体中可以包含该结构体本身的成员，具体的自引用如下例：<br><img src="/img/yinyong.png" alt=""></p>
-</li>
-</ul>
-<h1 id="二、结构体的初始化"><a href="#二、结构体的初始化" class="headerlink" title="二、结构体的初始化"></a>二、结构体的初始化</h1><ul>
-<li><p>1.</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Stu</span>  </span></span><br><span class="line"><span class="class">&#123;</span>  </span><br><span class="line">  <span class="keyword">char</span> name[<span class="number">10</span>];  </span><br><span class="line">  <span class="keyword">int</span> age;  </span><br><span class="line">&#125;;  </span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Stu</span> <span class="title">s</span>=&#123;</span><span class="string">"lisi"</span>,<span class="number">22</span>&#125;;<span class="comment">//初始化</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>2.</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Node</span>  </span></span><br><span class="line"><span class="class">&#123;</span>  </span><br><span class="line">  <span class="keyword">int</span> data;  </span><br><span class="line">  <span class="class"><span class="keyword">struct</span> <span class="title">Stu</span> <span class="title">p</span>;</span>  </span><br><span class="line">  <span class="class"><span class="keyword">struct</span> <span class="title">Node</span>* <span class="title">next</span>;</span>  </span><br><span class="line">&#125;n=&#123;<span class="number">10</span>,&#123;<span class="string">"wangwu"</span>,<span class="number">21</span>&#125;,<span class="literal">NULL</span>&#125;;<span class="comment">//结构体嵌套初始化  </span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Node</span> <span class="title">w</span>=&#123;</span><span class="number">20</span>,&#123;<span class="string">"liwu"</span>,<span class="number">23</span>&#125;,<span class="literal">NULL</span>&#125;;<span class="comment">//结构体嵌套初始化</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<h1 id="三、结构体内存对齐"><a href="#三、结构体内存对齐" class="headerlink" title="三、结构体内存对齐"></a>三、结构体内存对齐</h1><ul>
-<li>1.结构体的对齐原则：</li>
-</ul>
-<p>（1）第一个成员在与结构体变量偏移量为0的地址处。</p>
-<p>（2）其他成员变量要对齐到某个数字（对齐数）的整数倍的地址处。对齐数=编译器默认的一个对齐数与该成员的大小的较小值。VS中默认的值为8， Linux中默认的值为4</p>
-<p>（3）结构体总大小为最大对齐数（每个成员变量除了第一个成员都有一个对齐数）的整数倍。</p>
-<p>（4）如果嵌套了结构体的情况，嵌套的结构体对齐到自己的最大对齐数的整数倍处，结构体的整体大小就是所有最大对齐数的整数倍。</p>
-<p>总体来说：结构体的内存对齐是拿空间换时间的做法，除此，对于结构体传参的问题，要传结构体的地址（函数传参的时候，参数是需要压栈的，如果传递一个结构体对象时候，结构体过大，参数压栈的系统开销比较大，所以会导致性能的下降）。</p>
-<h1 id="四、位段"><a href="#四、位段" class="headerlink" title="四、位段"></a>四、位段</h1><ul>
-<li><p>1.位段的声明和结构是相似的，有两个不同（一、位段的成员必须是int ,unsigned int，char.二，位段的成员名后边有一个冒号和一个数字）<br>如：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">A</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">      <span class="keyword">int</span> _a:<span class="number">2</span>;</span><br><span class="line">      <span class="keyword">int</span> _b:<span class="number">5</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>2.位段的内存分配</p>
-</li>
-</ul>
-<p>（1）位段的空间上是按照需要以4个字节（int）或者1个字节（char）的方式来开辟的。</p>
-<p>（2）位段涉及很多不确定因素，位段是不跨平台的，注重可移植的程序应该避免使用位段。</p>
-<p>总体来说，跟结构相比，位段可以达到同样的效果，但是可以很好的节约空间，但是有跨平台的问题存在。</p>
-<h1 id="五、枚举"><a href="#五、枚举" class="headerlink" title="五、枚举"></a>五、枚举</h1><p>枚举顾名思义就是一一列举。</p>
-<ul>
-<li>1.枚举类型的定义</li>
-</ul>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">enum</span> Day  </span><br><span class="line">&#123;  </span><br><span class="line">  Mon,  </span><br><span class="line">  Tues,  </span><br><span class="line">Wed,  </span><br><span class="line">Thur,  </span><br><span class="line">Fri,  </span><br><span class="line">Sat,  </span><br><span class="line">Sun  </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p> {}中的内容是枚举类型的可能取值，也叫枚举常量。这些可能取值都是有值的，默认从0开始，一次递增1，当然在定义的时候也可以赋初值的。如</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">enum color  </span><br><span class="line">&#123;  </span><br><span class="line">  RED=1,  </span><br><span class="line">  GREEN=2,  </span><br><span class="line">  BLUE=4  </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<h1 id="六、联合"><a href="#六、联合" class="headerlink" title="六、联合"></a>六、联合</h1><ul>
-<li>1.联合类型的定义</li>
-</ul>
-<p>联合类型定义的变量包含一系列的成员，特征是这些成员公用同一块空间（联合也称为共用体）。比如：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//联合类型的声明  </span></span><br><span class="line"><span class="keyword">union</span> Un  </span><br><span class="line">&#123;  </span><br><span class="line">  <span class="keyword">char</span> c;  </span><br><span class="line">  <span class="keyword">int</span> i;  </span><br><span class="line">&#125;;  </span><br><span class="line"><span class="comment">//联合变量的定义  </span></span><br><span class="line"><span class="keyword">union</span> Un un;</span><br></pre></td></tr></table></figure>
-<ul>
-<li><p>2.联合的特点<br>联合的成员是共用同一块内存空间的，这样一个联合变量的大小至少是最大成员的大小。</p>
-</li>
-<li><p>3.联合大小的计算</p>
-</li>
-</ul>
-<p>（1）联合的大小至少是最大成员的大小。</p>
-<p>（2）当最大成员大小不是最大对齐数的整数倍时，就要对齐到最大对齐数的整数倍。</p>
+        <h4 id="某天当我写完了鼠标连点器之后，鹏哥问我能不能写个截屏工具出来，当时我那叫一个···-不屑-，不就是一个截屏嘛，多简单！"><a href="#某天当我写完了鼠标连点器之后，鹏哥问我能不能写个截屏工具出来，当时我那叫一个···-不屑-，不就是一个截屏嘛，多简单！" class="headerlink" title="某天当我写完了鼠标连点器之后，鹏哥问我能不能写个截屏工具出来，当时我那叫一个···(不屑)，不就是一个截屏嘛，多简单！"></a>某天当我写完了鼠标连点器之后，鹏哥问我能不能写个截屏工具出来，当时我那叫一个···<a id="more"></a>(不屑)，不就是一个截屏嘛，多简单！</h4><h4 id="然而事情没这么简单，随后鹏哥向我展示了他声称找了很久的截屏小工具：当时我的表情：-gt-lt-这-我可不包UI设计啊，还有我只是个刚学会一点C皮毛的纯新手…只好回去百度我需要的相关接口了"><a href="#然而事情没这么简单，随后鹏哥向我展示了他声称找了很久的截屏小工具：当时我的表情：-gt-lt-这-我可不包UI设计啊，还有我只是个刚学会一点C皮毛的纯新手…只好回去百度我需要的相关接口了" class="headerlink" title="然而事情没这么简单，随后鹏哥向我展示了他声称找了很久的截屏小工具：当时我的表情： &gt; _ &lt;  这..我可不包UI设计啊，还有我只是个刚学会一点C皮毛的纯新手…只好回去百度我需要的相关接口了"></a>然而事情没这么简单，随后鹏哥向我展示了他声称找了很久的截屏小工具：当时我的表情： &gt; _ &lt;  这..我可不包UI设计啊，还有我只是个刚学会一点C皮毛的纯新手…只好回去百度我需要的相关接口了</h4><h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>截取屏幕，怎么截，截哪里，怎么存，存哪里，都是问题<br>于是一脸纠结的我理所当然的选择了最好存的图片格式：Bitmap位图，就是.bmp格式的图片，它的特征特别明显：容易存容易读，就是占用空间大。<br>然后就是怎么截，不管怎么截，我产生一个全屏幕窗口设备描述表的兼容位图总是没错的，你要截全屏我就都存到文件，你要截一部分我就在上面划那个一部分给你再存也就完事了<br>至于截哪里的问题，我本来想模仿qq截图来着，但是人家是按下快捷键后已经截取了全屏，然后让你用鼠标操作…（你懂得，我这菜鸟哪懂这样要怎么实现嘛），那我想，那我就退而求其次。利用鼠标的实时位置以及按键触发来确定你的截图起始位置，这样也算是能够以相对简单的方式实现了（我想你应该不会想用直接输入你想从哪个像素开始到哪个像素结束的方式来截一个图吧）。<br>存到哪里这个问题倒是好解决，我在c盘下创建一个专门存放截屏的目录，然后对每个截屏都取一个独一无二的名字<br>这样就解决了存哪里的问题</p>
+<h1 id="源文件"><a href="#源文件" class="headerlink" title="源文件"></a>源文件</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> _CRT_SECURE_NO_WARNINGS</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;wtypes.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;tchar.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;math.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;time.h&gt;</span></span></span><br><span class="line"><span class="comment">//#include&lt;afx.h&gt;</span></span><br><span class="line"><span class="comment">//默认储存路径</span></span><br><span class="line"><span class="keyword">char</span> path[<span class="number">260</span>] = <span class="string">"c:/shots/"</span>;</span><br><span class="line"><span class="comment">//设置文件名称</span></span><br><span class="line"><span class="function"><span class="keyword">char</span>* <span class="title">setname</span><span class="params">(<span class="keyword">char</span>* p)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="comment">//strcat(p, "-");</span></span><br><span class="line">	<span class="comment">//strcat(p, __DATE__);</span></span><br><span class="line">	<span class="keyword">char</span> * ret = p;</span><br><span class="line">	<span class="keyword">while</span> (*p)</span><br><span class="line">	&#123;  </span><br><span class="line">		<span class="keyword">if</span> (*p == <span class="string">':'</span> || *p == <span class="string">' '</span>||*p == <span class="string">'\n'</span>)*p = <span class="string">'-'</span>;</span><br><span class="line">		p++;</span><br><span class="line">	&#125;</span><br><span class="line">	*(p - <span class="number">1</span>) = <span class="number">0</span>;</span><br><span class="line">	<span class="built_in">strcat</span>(ret, <span class="string">".bmp"</span>);</span><br><span class="line">	<span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//设置打印位置</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">CaptureScreen</span><span class="params">(<span class="keyword">int</span> x1, <span class="keyword">int</span> y1, <span class="keyword">int</span> x2, <span class="keyword">int</span> y2)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">time_t</span> lt = time(<span class="literal">NULL</span>);</span><br><span class="line">	<span class="keyword">char</span> p[<span class="number">100</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line">	<span class="keyword">char</span> name[<span class="number">100</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line">	<span class="keyword">int</span> t = <span class="number">0</span>;</span><br><span class="line">	<span class="built_in">strcpy</span>(p, ctime(&amp;lt));</span><br><span class="line">	setname(p);</span><br><span class="line">	<span class="built_in">sprintf</span>(name, <span class="string">"%s%s"</span>,path,p);  </span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"保存至:\n%s"</span>,name);</span><br><span class="line">	<span class="comment">//system("pause");</span></span><br><span class="line">	<span class="keyword">if</span> (x2 &lt; x1)</span><br><span class="line">	&#123;</span><br><span class="line">		t = x2; x2 = x1; x1 = t;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (y2 &lt; y1)</span><br><span class="line">	&#123;</span><br><span class="line">		t = y2; y2 = y1; y1 = t;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="comment">//获得桌面窗口句柄</span></span><br><span class="line">	HWND hDesktopWnd = GetDesktopWindow();</span><br><span class="line">	<span class="comment">//获得桌面窗口设备环境</span></span><br><span class="line">	HDC hDesktopDC = GetDC(hDesktopWnd);</span><br><span class="line">	<span class="comment">//产生全屏幕窗口设备描述表的兼容设备环境</span></span><br><span class="line">	HDC hCaptureDC = CreateCompatibleDC(hDesktopDC);</span><br><span class="line">	<span class="comment">//产生全屏幕窗口设备描述表的兼容位图</span></span><br><span class="line">	HBITMAP hCaptureBitmap = CreateCompatibleBitmap(hDesktopDC, x2, y2);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"\n宽度:%d\n高度:%d\n"</span>, x2 - x1, y2 - y1);</span><br><span class="line">	<span class="comment">//system("pause");</span></span><br><span class="line">	<span class="comment">//将兼容位图选入兼容设备环境</span></span><br><span class="line">	SelectObject(hCaptureDC, hCaptureBitmap);</span><br><span class="line">	<span class="comment">//将全屏幕窗口位图的象素数据拷贝到兼容设备描述表</span></span><br><span class="line">	BitBlt(hCaptureDC,  <span class="number">0</span>, <span class="number">0</span>, x2-x1, y2-y1, hDesktopDC, x1, y1, SRCCOPY);</span><br><span class="line">	BITMAPINFO    bi;</span><br><span class="line">	<span class="keyword">void</span> *pBits = <span class="literal">NULL</span>;</span><br><span class="line">	ZeroMemory(&amp;bi, <span class="keyword">sizeof</span>(bi));</span><br><span class="line">	bi.bmiHeader.biSize = <span class="keyword">sizeof</span>(bi.bmiHeader);</span><br><span class="line">	bi.bmiHeader.biHeight = (y2 - y1);</span><br><span class="line">	bi.bmiHeader.biWidth = (x2 - x1);</span><br><span class="line">	bi.bmiHeader.biPlanes = <span class="number">1</span>;</span><br><span class="line">	bi.bmiHeader.biBitCount = <span class="number">24</span>;</span><br><span class="line">	bi.bmiHeader.biCompression = BI_RGB;</span><br><span class="line">	bi.bmiHeader.biSizeImage = <span class="number">3</span> * (y2 - y1)*(x2 - x1);</span><br><span class="line">	<span class="comment">//产生位图兼容设备描述表</span></span><br><span class="line">	<span class="comment">//DECLARE_HANDLE(HDC);</span></span><br><span class="line">	HDC        hBmpFileDC = CreateCompatibleDC(hDesktopDC);</span><br><span class="line">	<span class="comment">//产生位图兼容位图  </span></span><br><span class="line">	HBITMAP    hBmpFileBitmap = CreateDIBSection(hDesktopDC, &amp;bi, DIB_RGB_COLORS, &amp;pBits, <span class="literal">NULL</span>, <span class="number">0</span>);</span><br><span class="line">	<span class="comment">//将兼容位图选入兼设备描述表容设备描述表</span></span><br><span class="line">	SelectObject(hBmpFileDC, hBmpFileBitmap);</span><br><span class="line">	<span class="comment">//将捕获的位图的象素拷贝到位图设备环境</span></span><br><span class="line">	BitBlt(hBmpFileDC, <span class="number">0</span>, <span class="number">0</span>, x2 - x1, y2 - y1, hCaptureDC, <span class="number">0</span>, <span class="number">0</span>, SRCCOPY);</span><br><span class="line">	<span class="comment">//创建文件    typedef void * HANDLE;</span></span><br><span class="line">	HANDLE    hFile = CreateFile(name, GENERIC_WRITE, FILE_SHARE_WRITE, <span class="literal">NULL</span>, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, <span class="literal">NULL</span>);</span><br><span class="line">	<span class="comment">//保存位图文件</span></span><br><span class="line">	<span class="keyword">if</span> (hFile != INVALID_HANDLE_VALUE)</span><br><span class="line">	&#123;</span><br><span class="line">		DWORD dwRet = <span class="number">0</span>;</span><br><span class="line">		BITMAPFILEHEADER bmfHeader;</span><br><span class="line">		ZeroMemory(&amp;bmfHeader, <span class="keyword">sizeof</span>(bmfHeader));</span><br><span class="line">		bmfHeader.bfOffBits = <span class="keyword">sizeof</span>(BITMAPFILEHEADER)+<span class="keyword">sizeof</span>(BITMAPINFOHEADER);</span><br><span class="line">		bmfHeader.bfSize = bi.bmiHeader.biSizeImage + bmfHeader.bfOffBits;</span><br><span class="line">		bmfHeader.bfType = 'MB';</span><br><span class="line">		<span class="comment">//写入位图信息头</span></span><br><span class="line">		WriteFile(hFile, &amp;bmfHeader, <span class="keyword">sizeof</span>(bmfHeader), &amp;dwRet, <span class="literal">NULL</span>);</span><br><span class="line">		<span class="comment">//写入位图尺寸颜色表等信息</span></span><br><span class="line">		WriteFile(hFile, &amp;bi.bmiHeader, <span class="keyword">sizeof</span>(bi.bmiHeader), &amp;dwRet, <span class="literal">NULL</span>);</span><br><span class="line">		<span class="comment">//写入位图数据块</span></span><br><span class="line">		WriteFile(hFile, pBits, bi.bmiHeader.biSizeImage, &amp;dwRet, <span class="literal">NULL</span>);</span><br><span class="line">    <span class="comment">//剪切板操作，当前有兼容性问题，故注释，正在解决</span></span><br><span class="line">		<span class="comment">////写入剪切板</span></span><br><span class="line">		<span class="comment">//if (OpenClipboard(NULL) &amp;&amp; EmptyClipboard())</span></span><br><span class="line">		<span class="comment">//&#123;</span></span><br><span class="line">		<span class="comment">//	SetClipboardData(CF_BITMAP, hFile);</span></span><br><span class="line">		<span class="comment">//&#125;</span></span><br><span class="line">		<span class="comment">//CloseClipboard();</span></span><br><span class="line">		CloseHandle(hFile);</span><br><span class="line">	&#125;</span><br><span class="line">	DeleteDC(hBmpFileDC);</span><br><span class="line">	DeleteObject(hBmpFileBitmap);</span><br><span class="line">	ReleaseDC(hDesktopWnd, hDesktopDC);</span><br><span class="line">	DeleteDC(hCaptureDC);</span><br><span class="line">	DeleteObject(hCaptureBitmap);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Pos</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	COORD pos;</span><br><span class="line">	HANDLE hOutput;</span><br><span class="line">	pos.X = x;</span><br><span class="line">	pos.Y = y;</span><br><span class="line">	hOutput = GetStdHandle(STD_OUTPUT_HANDLE);</span><br><span class="line">	SetConsoleCursorPosition(hOutput, pos);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">printpos</span><span class="params">(<span class="keyword">int</span> *x, <span class="keyword">int</span>* y,<span class="keyword">int</span> z)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">long</span> zx = <span class="number">-1</span>;</span><br><span class="line">	<span class="keyword">long</span> zy = <span class="number">-1</span>;</span><br><span class="line">	POINT ptB = &#123; <span class="number">0</span>, <span class="number">0</span> &#125;;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//typedef struct tagPOINT</span></span><br><span class="line">	<span class="comment">//&#123;</span></span><br><span class="line">	<span class="comment">//LONG  x;</span></span><br><span class="line">	<span class="comment">//LONG  y;</span></span><br><span class="line">	<span class="comment">//&#125; POINT, * PPOINT, NEAR * NPPOINT, FAR * LPPOINT;</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">while</span> (<span class="number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		LPPOINT xy = &amp;ptB;  <span class="comment">//位置变量</span></span><br><span class="line">		GetCursorPos(xy);   <span class="comment">//获取鼠标当前位置</span></span><br><span class="line">		<span class="comment">//如果鼠标移动，（即当前的坐标改变则打印出坐标）打印出做坐标。</span></span><br><span class="line">		<span class="keyword">if</span> ((zx != xy-&gt;x) || (zy != xy-&gt;y))</span><br><span class="line">		&#123;</span><br><span class="line">			Pos(<span class="number">0</span>, z);</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"x=%4d,y=%4d\n"</span>, xy-&gt;x*<span class="number">1920</span>/<span class="number">1536</span>, xy-&gt;y*<span class="number">1080</span>/<span class="number">864</span>);</span><br><span class="line">			zx = xy-&gt;x;</span><br><span class="line">			zy = xy-&gt;y;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (GetAsyncKeyState(<span class="string">'Q'</span>)&amp;&amp;GetAsyncKeyState( VK_CONTROL))</span><br><span class="line">		&#123;</span><br><span class="line">			ShowWindow(FindWindow(<span class="literal">NULL</span>, _T(<span class="string">"shot"</span>)), SW_MINIMIZE);</span><br><span class="line">			Sleep(<span class="number">500</span>);</span><br><span class="line">			CaptureScreen(<span class="number">0</span>, <span class="number">0</span>, <span class="number">1920</span>, <span class="number">1080</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (GetAsyncKeyState(VK_SPACE))</span><br><span class="line">		&#123;</span><br><span class="line">      <span class="comment">//若打印出来的坐标超过1920  1080请将下面的乘除操作去掉</span></span><br><span class="line">			*x = xy-&gt;x*<span class="number">1920</span>/<span class="number">1536</span>;</span><br><span class="line">			*y = xy-&gt;y*<span class="number">1080</span>/<span class="number">864</span>;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">char</span> * <span class="title">change</span><span class="params">(<span class="keyword">char</span>*p)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">char</span>*ret = p;</span><br><span class="line">	<span class="keyword">while</span> (*p)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (*p == <span class="string">'/'</span>)</span><br><span class="line">			*p = <span class="string">'\\'</span>;</span><br><span class="line">		p++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (*(p - <span class="number">1</span>) != <span class="string">'\\'</span>)<span class="built_in">strcat</span>(p<span class="number">-1</span>, <span class="string">"\\"</span>);</span><br><span class="line">	<span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> x1, x2, y1, y2;</span><br><span class="line">	<span class="keyword">char</span> c = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">char</span> cpath[<span class="number">270</span>] = &#123; <span class="number">0</span> &#125;;</span><br><span class="line">  <span class="comment">//改变窗口名称，方便进行最小化</span></span><br><span class="line">	system(<span class="string">"title shot"</span>);</span><br><span class="line">  <span class="comment">//修改窗口大小</span></span><br><span class="line">	system(<span class="string">"mode con cols=40 lines=10"</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"是否改变储存路径？(y/n)"</span>);</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%c"</span>, &amp;c);</span><br><span class="line">	<span class="keyword">if</span> (c == <span class="string">'y'</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		system(<span class="string">"cls"</span>);</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"请输入新路径:\n$ "</span>);</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%s"</span>, path);</span><br><span class="line">		change(path);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">sprintf</span>(cpath, <span class="string">"md %s"</span>, path);</span><br><span class="line">  <span class="comment">//创建相应路径，如果已经存在也没事</span></span><br><span class="line">	system(cpath);</span><br><span class="line">	system(<span class="string">"cls"</span>);</span><br><span class="line">	Pos(<span class="number">0</span>, <span class="number">9</span>);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"按下Ctrl+Q截取全屏\n按下Ctrl+W进入截屏"</span>);</span><br><span class="line">	<span class="keyword">while</span> (<span class="number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		Pos(<span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">		<span class="keyword">if</span> (GetAsyncKeyState(<span class="string">'Q'</span>) &amp;&amp; GetAsyncKeyState(VK_CONTROL))</span><br><span class="line">		&#123;</span><br><span class="line">			i = <span class="number">0</span>;</span><br><span class="line">			<span class="keyword">while</span> (i &lt; <span class="number">8</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				Pos(<span class="number">0</span>, i++);</span><br><span class="line">				<span class="built_in">printf</span>(<span class="string">"                                        "</span>);</span><br><span class="line">			&#125;</span><br><span class="line">			Pos(<span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">			ShowWindow(FindWindow(<span class="literal">NULL</span>, _T(<span class="string">"shot"</span>)), SW_MINIMIZE);</span><br><span class="line">			Sleep(<span class="number">500</span>);</span><br><span class="line">			CaptureScreen(<span class="number">0</span>, <span class="number">0</span>, <span class="number">1920</span>, <span class="number">1080</span>);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (GetAsyncKeyState(VK_CONTROL) &amp;&amp; GetAsyncKeyState(<span class="string">'W'</span>))</span><br><span class="line">		&#123;</span><br><span class="line">			i = <span class="number">0</span>;</span><br><span class="line">			<span class="keyword">while</span> (i &lt; <span class="number">8</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				Pos(<span class="number">0</span>, i++);</span><br><span class="line">				<span class="built_in">printf</span>(<span class="string">"                                        "</span>);</span><br><span class="line">			&#125;</span><br><span class="line">			Pos(<span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"按下空格选取截图起点\n"</span>);</span><br><span class="line">			printpos(&amp;x1, &amp;y1, <span class="number">1</span>);</span><br><span class="line">			Sleep(<span class="number">300</span>);</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"按下空格选取截图终点\n"</span>);</span><br><span class="line">			printpos(&amp;x2, &amp;y2, <span class="number">3</span>);</span><br><span class="line">			CaptureScreen(x1, y1, x2, y2);</span><br><span class="line">			i = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">			<span class="comment">//if (GetAsyncKeyState(VK_ESCAPE))</span></span><br><span class="line">			<span class="comment">//break;</span></span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这样我们的截屏工具就做好了，它在前台运行时使用截全屏会自动隐藏，这样不会截到自己（就不会挡住一些东西）当然也可以后台运行，你只要记住快捷键就好了！<br>刚进入程序时不想改变默认路径可以直接回车，想改变的话就按提示操作吧~</p>
 
       
     </div>
@@ -565,7 +502,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/自定义类型/" rel="tag"><i class="fa fa-tag"></i> 自定义类型</a>
+            <a href="/tags/小工具/" rel="tag"><i class="fa fa-tag"></i> 小工具</a>
           
         </div>
       
@@ -578,8 +515,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/22/hexo-next博客进阶攻略/" rel="next" title="hexo+next博客进阶攻略">
-                <i class="fa fa-chevron-left"></i> hexo+next博客进阶攻略
+              <a href="/2018/06/07/C语言实现鼠标连点器/" rel="next" title="C语言实现鼠标连点器">
+                <i class="fa fa-chevron-left"></i> C语言实现鼠标连点器
               </a>
             
           </div>
@@ -587,10 +524,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/05/28/创建动态通讯录/" rel="prev" title="创建动态通讯录">
-                创建动态通讯录 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -932,7 +865,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、结构体类型的创建"><span class="nav-number">1.</span> <span class="nav-text">一、结构体类型的创建</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#二、结构体的初始化"><span class="nav-number">2.</span> <span class="nav-text">二、结构体的初始化</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#三、结构体内存对齐"><span class="nav-number">3.</span> <span class="nav-text">三、结构体内存对齐</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#四、位段"><span class="nav-number">4.</span> <span class="nav-text">四、位段</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#五、枚举"><span class="nav-number">5.</span> <span class="nav-text">五、枚举</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#六、联合"><span class="nav-number">6.</span> <span class="nav-text">六、联合</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#某天当我写完了鼠标连点器之后，鹏哥问我能不能写个截屏工具出来，当时我那叫一个···-不屑-，不就是一个截屏嘛，多简单！"><span class="nav-number">1.</span> <span class="nav-text">某天当我写完了鼠标连点器之后，鹏哥问我能不能写个截屏工具出来，当时我那叫一个···(不屑)，不就是一个截屏嘛，多简单！</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#然而事情没这么简单，随后鹏哥向我展示了他声称找了很久的截屏小工具：当时我的表情：-gt-lt-这-我可不包UI设计啊，还有我只是个刚学会一点C皮毛的纯新手…只好回去百度我需要的相关接口了"><span class="nav-number">2.</span> <span class="nav-text">然而事情没这么简单，随后鹏哥向我展示了他声称找了很久的截屏小工具：当时我的表情： &gt; _ &lt;  这..我可不包UI设计啊，还有我只是个刚学会一点C皮毛的纯新手…只好回去百度我需要的相关接口了</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#思路"><span class="nav-number"></span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#源文件"><span class="nav-number"></span> <span class="nav-text">源文件</span></a></div>
             
 
           </div>
