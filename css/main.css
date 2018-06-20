@@ -1953,7 +1953,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #082fff;
+  background: #ffd2ff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3243,6 +3243,10 @@ pre .javascript .function {
   .pagination {
     margin: 8px 0 0;
   }
+}
+body {
+  background: url("/images/backgroud.png");
+  background-attachment: fixed;
 }
 .post {
   margin-top: 60px;
