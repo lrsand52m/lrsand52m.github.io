@@ -103,7 +103,7 @@
 <meta property="og:site_name" content="LRS&#39;s Blog">
 <meta property="og:description" content="我总结了一下我目前遇到过的数组里有重复数字的各种问题以及对应的求法">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-09-01T13:34:20.086Z">
+<meta property="og:updated_time" content="2018-09-01T13:45:09.512Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数组里的重复数字">
 <meta name="twitter:description" content="我总结了一下我目前遇到过的数组里有重复数字的各种问题以及对应的求法">
@@ -467,7 +467,7 @@
 <li>2.一个长度为N的数组，里面存有0 ~ N-2这些值，很明显，数组里必定存在重复元素，现在可以向你保证只有一个重复的元素，但是我们不保证其只出现两次，它可能出现很多次。例如int a[5] = {1,2,2,2,3};请找出这个重复的数字。<br>最直接方法：暴力…不用多想，妥妥的O(N*N)  (嗯 暴力还是能解决相当多的问题的- -！)<br>我觉得大家第一反应应该是想到了上面的哈希方法，建立一个长度N的哈希表，然后再…就解决了，这个方法时间复杂度O(N),空间复杂度O(N)，因为这里我们使用额外空间的长度不再是常数了。<br>那么···有木有空间复杂度O(LogN)或者O(1)的算法呢？<br>答案是有的，但是首先我们要了解一下抽屉原理：<br>有N本书要放进N-1个抽屉里，那么无论你怎么放，你都会发现至少有一个抽屉里装了不只一本书。这个原理非常简单，简单到什么程度呢？额   就是我这么一说你就明白的程度，够简单吧？<br>然而就是这么简单的抽屉原理，这个题目都给我们出了简化版：题目相当于告诉我们只有一个抽屉里放了多本书，而其他抽屉要么只有一本，要么没放书。<br>如果现实中有人扔给了你这样一个问题你会怎么做呢？<br>很简单，你只需要打开每个抽屉，查看里面有几本书就行了。<br>但是在这里书和抽屉并不是对应着放的，我们又该怎么办呢？<br>额  那么把书放进对应的抽屉不就好了吗？ 围观群众说道；<br>是的，就是这么简单！<br>我们对数组中的数字进行遍历并且这样操作：<br>1.数字等于下标值，代表书的位置正确，我们查看下一个；<br>2.数字不等于下标值，代表书的位置不对，我们需要调整：查看对应下标值位置上的数字，如果也对不上，那么交换。如果人家的位置是正确的…那么这个值显然就是你要找的重复值了！</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">int FindDupNum(int *a,int len)</span><br><span class="line">&#123;</span><br><span class="line">    int i = 0;</span><br><span class="line">    for(i = 0;i&lt;len;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        if(a[i] != i)</span><br><span class="line">        &#123;</span><br><span class="line">          if(a[a[i]] == a[i])</span><br><span class="line">              return a[i];</span><br><span class="line">          else</span><br><span class="line">          &#123;</span><br><span class="line">              int t = a[i];</span><br><span class="line">              a[i] = a[a[i]];</span><br><span class="line">              a[t] = t;</span><br><span class="line">              i--;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    perror(&quot;The Dup Not found&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这样每一次交换都会使一个抽屉里装的书是对的，那么我们最多遍历一遍就可以找到这个重复的数字了，并且我们实现了空间复杂度O(1),时间复杂度O(1)。<br>由于我打字打的手有点累，这次就先写到这里吧，我说的并不是很系统请见谅~~</p>
+<p>这样每一次交换都会使一个抽屉里装的书是对的，那么我们最多遍历一遍就可以找到这个重复的数字了，并且我们实现了空间复杂度O(1),时间复杂度O(N)。<br>由于我打字打的手有点累，这次就先写到这里吧，我说的并不是很系统请见谅~~</p>
 
       
     </div>
