@@ -103,7 +103,7 @@
 <meta property="og:site_name" content="LRS&#39;s Blog">
 <meta property="og:description" content="类和对象学到C++，最基础也是最重要的自然就是类和对象了。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-29T07:39:50.117Z">
+<meta property="og:updated_time" content="2018-10-29T07:52:47.848Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="类和对象">
 <meta name="twitter:description" content="类和对象学到C++，最基础也是最重要的自然就是类和对象了。">
@@ -405,7 +405,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2,627 字
+                  3,227 字
                 </span>
               
 
@@ -421,7 +421,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  10 分钟
+                  12 分钟
                 </span>
               
             </div>
@@ -509,6 +509,18 @@
 <li>类中包含以下成员，一定要放在初始化列表位置进行初始化:<br>1.引用成员变量<br>2.const成员变量<br>3.类类型成员(该类有非缺省的构造函数)  </li>
 </ol>
 <p>构造函数不仅可以构造与初始化对象，对于单个参数的构造函数，还具有类型转换的作用。(用关键字explicit可以禁止这样的隐式转换)</p>
+<h2 id="友元"><a href="#友元" class="headerlink" title="友元"></a><strong>友元</strong></h2><p><code>友元分为：友元函数和友元类</code></p>
+<h3 id="友元函数"><a href="#友元函数" class="headerlink" title="友元函数"></a>友元函数</h3><p>友元函数可以直接访问类的私有成员，它是定义在类外部的普通函数，不属于任何类，但需要在类的内部声 明，声明时需要加friend关键字。<br>说明:<br>1.友元函数可访问类的私有成员，但不是类的成员函数<br>2.友元函数不能用const修饰<br>3.友元函数可以在类定义的任何地方声明，不受类访问限定符限制<br>4.一个函数可以是多个类的友元函数<br>5.友元函数的调用与普通函数的调用和原理相同</p>
+<h3 id="友元类"><a href="#友元类" class="headerlink" title="友元类"></a>友元类</h3><p>友元类的所有成员函数都可以是另一个类的友元函数，都可以访问另一个类中的非公有成员<br>友元的优缺点<br>优点：提高了程序运行效率<br>缺点：破坏了类的封装性和隐藏性<br>注意：<br>友元关系是单向的，不具有交换性。<br>友元关系不能传递 如果B是A的友元，C是B的友元，则不能说明C时A的友元。</p>
+<h4 id="特殊友元类：内部类"><a href="#特殊友元类：内部类" class="headerlink" title="特殊友元类：内部类"></a>特殊友元类：内部类</h4><p>直接定义在其他类里面的类是该类的内部类<br>1.内部类是外部类的友元类，反之不然.<br>2.内部类可以直接访问外部类的静态成员，枚举成员并且不需要外部类的名字。<br>3.sizeof(外部类) = 外部类大小，与内部类无关。</p>
+<h2 id="类的静态成员"><a href="#类的静态成员" class="headerlink" title="类的静态成员"></a>类的静态成员</h2><p>声明为static的类成员称为类的静态成员，用static修饰的成员变量，称之为静态成员变量；<br>用static修饰的 成员函数，称之为静态成员函数。静态的成员变量一定要在类外进行初始化  </p>
+<ol>
+<li>静态成员为所有类对象所共享，不属于某个具体的实例   </li>
+<li>静态成员变量必须在类外定义，定义时不添加static关键字   </li>
+<li>类静态成员即可用类名::静态成员或者对象.静态成员来访问   </li>
+<li>静态成员函数没有隐藏的this指针，不能访问任何非静态成员   </li>
+<li>静态成员和类的普通成员一样，也有public、protected、private3种访问级别，也可以具有返回值， const修饰符等参数</li>
+</ol>
 
       
     </div>
@@ -926,7 +938,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#类和对象"><span class="nav-number">1.</span> <span class="nav-text">类和对象</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述"><span class="nav-number">1.1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类的六个默认成员函数"><span class="nav-number">1.2.</span> <span class="nav-text">类的六个默认成员函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#构造函数"><span class="nav-number">1.2.1.</span> <span class="nav-text">构造函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#析构函数"><span class="nav-number">1.2.2.</span> <span class="nav-text">析构函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#拷贝构造函数"><span class="nav-number">1.2.3.</span> <span class="nav-text">拷贝构造函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#赋值操作符重载"><span class="nav-number">1.2.4.</span> <span class="nav-text">赋值操作符重载</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#深拷贝与浅拷贝"><span class="nav-number">1.2.4.1.</span> <span class="nav-text">深拷贝与浅拷贝</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#取地址与const修饰的取地址操作符重载"><span class="nav-number">1.2.5.</span> <span class="nav-text">取地址与const修饰的取地址操作符重载</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化列表"><span class="nav-number">1.3.</span> <span class="nav-text">初始化列表</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#类和对象"><span class="nav-number">1.</span> <span class="nav-text">类和对象</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述"><span class="nav-number">1.1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类的六个默认成员函数"><span class="nav-number">1.2.</span> <span class="nav-text">类的六个默认成员函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#构造函数"><span class="nav-number">1.2.1.</span> <span class="nav-text">构造函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#析构函数"><span class="nav-number">1.2.2.</span> <span class="nav-text">析构函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#拷贝构造函数"><span class="nav-number">1.2.3.</span> <span class="nav-text">拷贝构造函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#赋值操作符重载"><span class="nav-number">1.2.4.</span> <span class="nav-text">赋值操作符重载</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#深拷贝与浅拷贝"><span class="nav-number">1.2.4.1.</span> <span class="nav-text">深拷贝与浅拷贝</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#取地址与const修饰的取地址操作符重载"><span class="nav-number">1.2.5.</span> <span class="nav-text">取地址与const修饰的取地址操作符重载</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化列表"><span class="nav-number">1.3.</span> <span class="nav-text">初始化列表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#友元"><span class="nav-number">1.4.</span> <span class="nav-text">友元</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#友元函数"><span class="nav-number">1.4.1.</span> <span class="nav-text">友元函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#友元类"><span class="nav-number">1.4.2.</span> <span class="nav-text">友元类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#特殊友元类：内部类"><span class="nav-number">1.4.2.1.</span> <span class="nav-text">特殊友元类：内部类</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类的静态成员"><span class="nav-number">1.5.</span> <span class="nav-text">类的静态成员</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -961,7 +973,7 @@
     
       <span class="post-meta-item-text">全站字数&#58;</span>
     
-    <span title="全站字数">32.8k</span>
+    <span title="全站字数">33.4k</span>
   
 </div>
 <div class="powered-by">
