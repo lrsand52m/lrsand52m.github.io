@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-09-21T04:14:11.301Z</updated>
+  <updated>2018-10-29T05:50:56.991Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>类和对象&lt;上&gt;</title>
+    <link href="http://yoursite.com/2018/10/29/"/>
+    <id>http://yoursite.com/2018/10/29/</id>
+    <published>2018-10-29T05:09:58.000Z</published>
+    <updated>2018-10-29T05:50:56.991Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="类和对象"><a href="#类和对象" class="headerlink" title="类和对象"></a>类和对象</h1><a id="more"></a><p>学到C++，最基础也是最重要的自然就是类和对象了。</p><h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><ul><li>类和结构体<br>为了兼容C语言，我们可以用struct来定义类，但是结构体里面是不能出现函数的，类却可以，我们可以理解为，结构体是一种数据的类型，而类是对象的类型，类能完成结构体的所有功能。</li><li>类和对象<br>类可以当成是对象的抽象，而对象是类的具体化实现。举个例子，我们可以说人类是一个类，而我们每个人就是一个对象，是人类这个概念的具体化。<br>类不占用内存，但是对象占用。</li><li>类的函数<br>类的函数可以在类里直接实现，也可以在类里写声明，在类外定义。如果一个函数代码量少并且经常用到建议直接放在类里实现，因为在类里实现的函数，编译器可能会将其当成内联函数处理，会在一些地方提高运行效率。<br>在类外实现的函数必须带上类域限定符来表示该函数属于哪个类。<br>类的成员函数是指那些把定义和原型写在类定义内部的函数，就像类定义中的其他变量一样。类成员函数是类的一个成员，它可以操作类的任意对象，可以访问对象中的所有成员。（静态成员函数除外）</li><li>类的访问限定符<br>类有三个访问限定符：public private protected<br>一个类可以有多个 public、protected 或 private 标记区域。每个标记区域在下一个标记区域开始之前或者在遇到类主体结束右括号之前都是有效的。成员和类的默认访问修饰符是 private。(struct定义的类默认是public)<br>public</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;类和对象&quot;&gt;&lt;a href=&quot;#类和对象&quot; class=&quot;headerlink&quot; title=&quot;类和对象&quot;&gt;&lt;/a&gt;类和对象&lt;/h1&gt;
+    
+    </summary>
+    
+      <category term="C++" scheme="http://yoursite.com/categories/C/"/>
+    
+    
+      <category term="C++" scheme="http://yoursite.com/tags/C/"/>
+    
+  </entry>
   
   <entry>
     <title>简述Linux开发工具</title>
