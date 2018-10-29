@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-10-29T07:11:02.107Z</updated>
+  <updated>2018-10-29T07:14:06.574Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://yoursite.com/2018/10/29/"/>
     <id>http://yoursite.com/2018/10/29/</id>
     <published>2018-10-29T07:01:29.000Z</published>
-    <updated>2018-10-29T07:11:02.107Z</updated>
+    <updated>2018-10-29T07:14:06.574Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="类和对象"><a href="#类和对象" class="headerlink" title="类和对象"></a><strong>类和对象</strong></h1><p><strong>前面我们说完了一些基本的类与对象的知识，接下来我们继续深入学习类与对象</strong><br><a id="more"></a></p><h2 id="初始化列表"><a href="#初始化列表" class="headerlink" title="初始化列表"></a><strong>初始化列表</strong></h2><p><em>构造函数调用之后，对象中已经有了一个初始值，但是我们不能将其称作为类对象成员的初始化，构造函数体中的语句只能将其称作为赋初值，而不能称作初始化。因为初始化只能初始化一次，而构造函数体内 可以多次赋值。</em><br>初始化列表：以一个冒号开始，接着是一个以逗号分隔的数据成员列表，每个”成员变量”后面跟一个放在括 号中的初始值或表达式。  </p><ol><li>每个成员变量在初始化列表中<strong>只能出现一次</strong>(初始化只能初始化一次)</li><li>成员变量在类中<strong>声明次序就是其在初始化列表中的初始化顺序</strong>，与其在<strong>初始化列表中的先后次序无关</strong></li><li><strong>尽量避免使用成员初始化成员</strong></li><li>类中包含以下成员，一定要放在初始化列表位置进行初始化:<br>1.引用成员变量<br>2.const成员变量<br>3.类类型成员(该类有非缺省的构造函数)</li></ol>]]></content>
+    <content type="html"><![CDATA[<h1 id="类和对象"><a href="#类和对象" class="headerlink" title="类和对象"></a><strong>类和对象</strong></h1><p><strong>前面我们说完了一些基本的类与对象的知识，接下来我们继续深入学习类与对象</strong><br><a id="more"></a></p><h2 id="初始化列表"><a href="#初始化列表" class="headerlink" title="初始化列表"></a><strong>初始化列表</strong></h2><p><em>构造函数调用之后，对象中已经有了一个初始值，但是我们不能将其称作为类对象成员的初始化，构造函数体中的语句只能将其称作为赋初值，而不能称作初始化。因为初始化只能初始化一次，而构造函数体内 可以多次赋值。</em><br>初始化列表：以一个冒号开始，接着是一个以逗号分隔的数据成员列表，每个”成员变量”后面跟一个放在括 号中的初始值或表达式。  </p><ol><li>每个成员变量在初始化列表中<strong>只能出现一次</strong>(初始化只能初始化一次)</li><li>成员变量在类中<strong>声明次序就是其在初始化列表中的初始化顺序</strong>，与其在<strong>初始化列表中的先后次序无关</strong></li><li><strong>尽量避免使用成员初始化成员</strong></li><li>类中包含以下成员，一定要放在初始化列表位置进行初始化:<br>1.引用成员变量<br>2.const成员变量<br>3.类类型成员(该类有非缺省的构造函数)  </li></ol><p>构造函数不仅可以构造与初始化对象，对于单个参数的构造函数，还具有类型转换的作用。(用关键字explicit可以禁止这样的隐式转换)</p>]]></content>
     
     <summary type="html">
     
