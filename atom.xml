@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-10-29T07:00:38.028Z</updated>
+  <updated>2018-10-29T07:08:29.855Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>类和对象&lt;下&gt;</title>
+    <link href="http://yoursite.com/2018/10/29/"/>
+    <id>http://yoursite.com/2018/10/29/</id>
+    <published>2018-10-29T07:01:29.000Z</published>
+    <updated>2018-10-29T07:08:29.855Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="类和对象"><a href="#类和对象" class="headerlink" title="类和对象"></a><strong>类和对象</strong></h1><p><strong>前面我们说完了一些基本的类与对象的知识，接下来我们继续深入学习类与对象</strong><br><a id="more"></a></p><h2 id="初始化列表"><a href="#初始化列表" class="headerlink" title="初始化列表"></a><strong>初始化列表</strong></h2><p><em>构造函数调用之后，对象中已经有了一个初始值，但是我们不能将其称作为类对象成员的初始化，构造函数体中的语句只能将其称作为赋初值，而不能称作初始化。因为初始化只能初始化一次，而构造函数体内 可以多次赋值。</em><br>初始化列表：以一个冒号开始，接着是一个以逗号分隔的数据成员列表，每个”成员变量”后面跟一个放在括 号中的初始值或表达式。  </p><ol><li>每个成员变量在初始化列表中只能出现一次(初始化只能初始化一次)</li><li>成员变量在类中声明次序就是其在初始化列表中的初始化顺序，与其在初始化列表中的先后次序无关</li><li>尽量避免使用成员初始化成员</li><li>类中包含以下成员，一定要放在初始化列表位置进行初始化:<br>1.引用成员变量<br>2.const成员变量<br>3.类类型成员(该类有非缺省的构造函数)</li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;类和对象&quot;&gt;&lt;a href=&quot;#类和对象&quot; class=&quot;headerlink&quot; title=&quot;类和对象&quot;&gt;&lt;/a&gt;&lt;strong&gt;类和对象&lt;/strong&gt;&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;前面我们说完了一些基本的类与对象的知识，接下来我们继续深入学习类与对象&lt;/strong&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="C++" scheme="http://yoursite.com/categories/C/"/>
+    
+    
+      <category term="C++" scheme="http://yoursite.com/tags/C/"/>
+    
+  </entry>
   
   <entry>
     <title>类和对象&lt;上&gt;</title>
