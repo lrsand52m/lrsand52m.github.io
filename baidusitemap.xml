@@ -5,30 +5,10 @@
     
   <url>
     <loc>http://yoursite.com/2018/10/29/</loc>
-    <lastmod>2018-10-29T07:14:06.574Z</lastmod>
+    <lastmod>2018-10-29T07:39:50.117Z</lastmod>
     <data>
         <display>
-        <title>类和对象<下></title>
-        <pubTime>2018-10-29T07:01:29.000Z</pubTime>
-        
-        <tag>C++</tag>
-         
-         
-           
-             
-              <breadCrumb title="C++" url="http://yoursite.com/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2018/10/29/</loc>
-    <lastmod>2018-10-29T07:00:38.028Z</lastmod>
-    <data>
-        <display>
-        <title>类和对象<上></title>
+        <title>类和对象</title>
         <pubTime>2018-10-29T05:09:58.000Z</pubTime>
         
         <tag>C++</tag>

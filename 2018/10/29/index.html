@@ -98,14 +98,14 @@
 <meta name="description" content="类和对象学到C++，最基础也是最重要的自然就是类和对象了。">
 <meta name="keywords" content="C++">
 <meta property="og:type" content="article">
-<meta property="og:title" content="类和对象&lt;上&gt;">
+<meta property="og:title" content="类和对象">
 <meta property="og:url" content="http://yoursite.com/2018/10/29/index.html">
 <meta property="og:site_name" content="LRS&#39;s Blog">
 <meta property="og:description" content="类和对象学到C++，最基础也是最重要的自然就是类和对象了。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-29T07:00:38.028Z">
+<meta property="og:updated_time" content="2018-10-29T07:39:50.117Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="类和对象&lt;上&gt;">
+<meta name="twitter:title" content="类和对象">
 <meta name="twitter:description" content="类和对象学到C++，最基础也是最重要的自然就是类和对象了。">
 
 
@@ -142,7 +142,7 @@
 
 
 
-  <title>类和对象<上> | LRS's Blog</title>
+  <title>类和对象 | LRS's Blog</title>
   
 
 
@@ -330,7 +330,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">类和对象<上></h1>
+          <h1 class="post-title" itemprop="name headline">类和对象</h1>
         
 
         <div class="post-meta">
@@ -382,7 +382,7 @@
 
           
 			
-			<span id="/2018/10/29/" class="leancloud_visitors" data-flag-title="类和对象<上>">
+			<span id="/2018/10/29/" class="leancloud_visitors" data-flag-title="类和对象">
 			&nbsp; | &nbsp;
 			<span class="post-meta-item-icon">
 			<i class="fa fa-eye"></i>
@@ -405,7 +405,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2,280 字
+                  2,627 字
                 </span>
               
 
@@ -421,7 +421,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  9 分钟
+                  10 分钟
                 </span>
               
             </div>
@@ -501,6 +501,14 @@
 <h4 id="深拷贝与浅拷贝"><a href="#深拷贝与浅拷贝" class="headerlink" title="深拷贝与浅拷贝"></a>深拷贝与浅拷贝</h4><p>对于系统默认的拷贝构造与赋值函数，都只是将变量值一一拷贝的浅拷贝，对于动态开辟的空间，必须使用深拷贝，否则在对象销毁时会使程序崩溃。</p>
 <h3 id="取地址与const修饰的取地址操作符重载"><a href="#取地址与const修饰的取地址操作符重载" class="headerlink" title="取地址与const修饰的取地址操作符重载"></a>取地址与const修饰的取地址操作符重载</h3><p>这两个默认成员函数一般不用重新定义 ，编译器默认会生成。<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Date</span></span></span><br><span class="line"><span class="class">&#123;</span> <span class="keyword">public</span> :    </span><br><span class="line">  Date* <span class="keyword">operator</span>&amp;()    </span><br><span class="line">  &#123;        </span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span> ;    </span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">const</span> Date* <span class="keyword">operator</span>&amp;()<span class="keyword">const</span>    </span><br><span class="line">  &#123;        </span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span> ;    </span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">private</span> :    </span><br><span class="line">  <span class="keyword">int</span> _year ; <span class="comment">// 年    </span></span><br><span class="line">  <span class="keyword">int</span> _month ; <span class="comment">// 月    </span></span><br><span class="line">  <span class="keyword">int</span> _day ; <span class="comment">// 日</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
 <p>这两个运算符一般不需要重载，使用编译器生成的默认取地址的重载即可，只有特殊情况，才需要重载，比 如想让别人获取到指定的内容.</p>
+<h2 id="初始化列表"><a href="#初始化列表" class="headerlink" title="初始化列表"></a><strong>初始化列表</strong></h2><p><em>构造函数调用之后，对象中已经有了一个初始值，但是我们不能将其称作为类对象成员的初始化，构造函数体中的语句只能将其称作为赋初值，而不能称作初始化。因为初始化只能初始化一次，而构造函数体内 可以多次赋值。</em><br>初始化列表：以一个冒号开始，接着是一个以逗号分隔的数据成员列表，每个”成员变量”后面跟一个放在括 号中的初始值或表达式。  </p>
+<ol>
+<li>每个成员变量在初始化列表中<strong>只能出现一次</strong>(初始化只能初始化一次)</li>
+<li>成员变量在类中<strong>声明次序就是其在初始化列表中的初始化顺序</strong>，与其在<strong>初始化列表中的先后次序无关</strong></li>
+<li><strong>尽量避免使用成员初始化成员</strong></li>
+<li>类中包含以下成员，一定要放在初始化列表位置进行初始化:<br>1.引用成员变量<br>2.const成员变量<br>3.类类型成员(该类有非缺省的构造函数)  </li>
+</ol>
+<p>构造函数不仅可以构造与初始化对象，对于单个参数的构造函数，还具有类型转换的作用。(用关键字explicit可以禁止这样的隐式转换)</p>
 
       
     </div>
@@ -577,10 +585,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/10/29/" rel="prev" title="类和对象<下>">
-                类和对象<下> <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -693,7 +697,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">16</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -922,7 +926,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#类和对象"><span class="nav-number">1.</span> <span class="nav-text">类和对象</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述"><span class="nav-number">1.1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类的六个默认成员函数"><span class="nav-number">1.2.</span> <span class="nav-text">类的六个默认成员函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#构造函数"><span class="nav-number">1.2.1.</span> <span class="nav-text">构造函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#析构函数"><span class="nav-number">1.2.2.</span> <span class="nav-text">析构函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#拷贝构造函数"><span class="nav-number">1.2.3.</span> <span class="nav-text">拷贝构造函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#赋值操作符重载"><span class="nav-number">1.2.4.</span> <span class="nav-text">赋值操作符重载</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#深拷贝与浅拷贝"><span class="nav-number">1.2.4.1.</span> <span class="nav-text">深拷贝与浅拷贝</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#取地址与const修饰的取地址操作符重载"><span class="nav-number">1.2.5.</span> <span class="nav-text">取地址与const修饰的取地址操作符重载</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#类和对象"><span class="nav-number">1.</span> <span class="nav-text">类和对象</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述"><span class="nav-number">1.1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类的六个默认成员函数"><span class="nav-number">1.2.</span> <span class="nav-text">类的六个默认成员函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#构造函数"><span class="nav-number">1.2.1.</span> <span class="nav-text">构造函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#析构函数"><span class="nav-number">1.2.2.</span> <span class="nav-text">析构函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#拷贝构造函数"><span class="nav-number">1.2.3.</span> <span class="nav-text">拷贝构造函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#赋值操作符重载"><span class="nav-number">1.2.4.</span> <span class="nav-text">赋值操作符重载</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#深拷贝与浅拷贝"><span class="nav-number">1.2.4.1.</span> <span class="nav-text">深拷贝与浅拷贝</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#取地址与const修饰的取地址操作符重载"><span class="nav-number">1.2.5.</span> <span class="nav-text">取地址与const修饰的取地址操作符重载</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#初始化列表"><span class="nav-number">1.3.</span> <span class="nav-text">初始化列表</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -957,7 +961,7 @@
     
       <span class="post-meta-item-text">全站字数&#58;</span>
     
-    <span title="全站字数">32.9k</span>
+    <span title="全站字数">32.8k</span>
   
 </div>
 <div class="powered-by">
