@@ -103,7 +103,7 @@
 <meta property="og:site_name" content="LRS&#39;s Blog">
 <meta property="og:description" content="类和对象">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-29T06:16:08.545Z">
+<meta property="og:updated_time" content="2018-10-29T06:30:24.765Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="类和对象&lt;上&gt;">
 <meta name="twitter:description" content="类和对象">
@@ -405,7 +405,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  966 字
+                  1,809 字
                 </span>
               
 
@@ -421,7 +421,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  4 分钟
+                  7 分钟
                 </span>
               
             </div>
@@ -474,7 +474,22 @@
 <li>取地址操作符重载</li>
 <li>const修饰的取地址操作符重载</li>
 </ol>
-<h3 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h3>
+<h3 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h3><p>对于一个类，可以通过成员函数等公有的方法给对象设置内容，但是如果每次创建对象都调用该方法设置信息，未免有点麻烦，那能否在<strong>对象创建</strong>时，就将信息设置进去呢？<br>构造函数是一个特殊的成员函数，名字与类名相同,创建类类型对象时由<strong>编译器自动调用</strong>，保证每个数据成员 都有一个合适的初始值，并且在对象的生命周期内<strong>只调用一次</strong>。<br>构造函数是特殊的成员函数，其特征如下：  </p>
+<ol>
+<li><strong>函数名与类名相同</strong>。</li>
+<li>无返回值。</li>
+<li>对象构造（对象实例化）时编译器自动调用对应的构造函数。</li>
+<li>构造函数<strong>可以重载</strong>  </li>
+</ol>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Date</span></span></span><br><span class="line"><span class="class">&#123;</span> <span class="keyword">public</span> :   </span><br><span class="line">   <span class="comment">// 1.无参构造函数    </span></span><br><span class="line">   Date ()    &#123;&#125;        </span><br><span class="line">   <span class="comment">// 2.带参构造函数    </span></span><br><span class="line">   Date (<span class="keyword">int</span> year, <span class="keyword">int</span> month , <span class="keyword">int</span> day )    </span><br><span class="line">   &#123;       </span><br><span class="line">      _year = year ;</span><br><span class="line">      _month = month ;</span><br><span class="line">      _day = day ;    </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">private</span> :    </span><br><span class="line">    <span class="keyword">int</span> _year ;    </span><br><span class="line">    <span class="keyword">int</span> _month ;    </span><br><span class="line">    <span class="keyword">int</span> _day ; &#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">TestDate</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;    Date d1;</span><br><span class="line">  <span class="comment">// 调用无参构造函数    </span></span><br><span class="line">  <span class="function">Date <span class="title">d2</span> <span class="params">(<span class="number">2015</span>, <span class="number">1</span>, <span class="number">1</span>)</span></span>;</span><br><span class="line">  <span class="comment">// 调用带参的构造函数        </span></span><br><span class="line">  <span class="comment">// 注意：如果通过无参构造函数创建对象时，对象后面不用跟括号，否则就成了函数声明    </span></span><br><span class="line">  <span class="comment">// 以下代码的函数：声明了d3函数，该函数无参，返回一个日期类型的对象    Date d3();</span></span><br><span class="line">&#125;</span><br><span class="line">```  </span><br><span class="line"><span class="number">5.</span> 构造函数可以在类中定义，也可以在类外定义。</span><br><span class="line"><span class="number">6.</span> 如果类中没有显式定义构造函数，则C++编译器会**自动生成一个无参的默认构造函数**，一旦用户显式定 义编译器将**不再生成**  </span><br><span class="line"></span><br><span class="line">```c</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Date</span></span></span><br><span class="line"><span class="class">&#123;</span> <span class="keyword">public</span>:    </span><br><span class="line">  <span class="function"><span class="keyword">void</span> <span class="title">SetDate</span><span class="params">(<span class="keyword">int</span> year, <span class="keyword">int</span> month, <span class="keyword">int</span> day)</span>    </span></span><br><span class="line"><span class="function">  </span>&#123;       </span><br><span class="line">     _year = year;        </span><br><span class="line">     _month = month;        </span><br><span class="line">     _day = day;    </span><br><span class="line">   &#125;        </span><br><span class="line">   <span class="comment">/*    </span></span><br><span class="line"><span class="comment">   // 如果用户显式定义了构造函数，编译器将不再生成    </span></span><br><span class="line"><span class="comment">   Date (int year, int month, int day)    </span></span><br><span class="line"><span class="comment">   &#123;        </span></span><br><span class="line"><span class="comment">      _year = year;       </span></span><br><span class="line"><span class="comment">      _month = month;</span></span><br><span class="line"><span class="comment">      _day = day;    </span></span><br><span class="line"><span class="comment">    &#125;    */</span></span><br><span class="line">  <span class="keyword">private</span>:    </span><br><span class="line">    <span class="keyword">int</span> _year;    </span><br><span class="line">    <span class="keyword">int</span> _month;    </span><br><span class="line">    <span class="keyword">int</span> _day;</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Test</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;    </span><br><span class="line">  <span class="comment">// 没有定义构造函数，对象也可以创建成功，因此此处调用的是编译器生成的默认构造函数    </span></span><br><span class="line">  Date d;</span><br><span class="line">&#125;</span><br><span class="line">```  </span><br><span class="line"><span class="number">7.</span> 无参的构造函数和全缺省的构造函数都称为缺省构造函数，并且缺省构造函数只能有一个  </span><br><span class="line"></span><br><span class="line">```c</span><br><span class="line"><span class="comment">// 缺省构造函数</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Date</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">  <span class="keyword">public</span>:    </span><br><span class="line">    Date()    </span><br><span class="line">    &#123;        </span><br><span class="line">      _year = <span class="number">1900</span> ;        </span><br><span class="line">      _month = <span class="number">1</span> ;        </span><br><span class="line">      _day = <span class="number">1</span>;    </span><br><span class="line">    &#125;        </span><br><span class="line">    Date (<span class="keyword">int</span> year = <span class="number">1900</span>, <span class="keyword">int</span> month = <span class="number">1</span>, <span class="keyword">int</span> day = <span class="number">1</span>)    </span><br><span class="line">    &#123;        </span><br><span class="line">      _year = year;        </span><br><span class="line">      _month = month;        </span><br><span class="line">      _day = day;    </span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> :    </span><br><span class="line">  <span class="keyword">int</span> _year ;    </span><br><span class="line">  <span class="keyword">int</span> _month ;    </span><br><span class="line">  <span class="keyword">int</span> _day ;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 以下测试函数无法通过编译</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Test</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;   </span><br><span class="line">   Date d1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="析构函数"><a href="#析构函数" class="headerlink" title="析构函数"></a>析构函数</h3><p>析构函数：与构造函数功能相反，在对象被销毁时，由编译器自动调用，完成类的一些资源清理和汕尾工作。(而不是删除对象，析构函数是在对象销毁前自动调用的)  </p>
+<ol>
+<li>析构函数名是在类名前加上字符 ~。</li>
+<li>无参数无返回值。</li>
+<li><strong>一个类有且只有一个析构函数</strong>。若未显式定义，系统会自动生成默认的析构函数。</li>
+<li>对象生命周期结束时，<strong>C++编译系统系统自动调用析构函数</strong>。 </li>
+</ol>
+
       
     </div>
     
@@ -891,7 +906,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#类和对象"><span class="nav-number">1.</span> <span class="nav-text">类和对象</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述"><span class="nav-number">1.1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类的六个默认成员函数"><span class="nav-number">1.2.</span> <span class="nav-text">类的六个默认成员函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#构造函数"><span class="nav-number">1.2.1.</span> <span class="nav-text">构造函数</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#类和对象"><span class="nav-number">1.</span> <span class="nav-text">类和对象</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述"><span class="nav-number">1.1.</span> <span class="nav-text">概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类的六个默认成员函数"><span class="nav-number">1.2.</span> <span class="nav-text">类的六个默认成员函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#构造函数"><span class="nav-number">1.2.1.</span> <span class="nav-text">构造函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#析构函数"><span class="nav-number">1.2.2.</span> <span class="nav-text">析构函数</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -926,7 +941,7 @@
     
       <span class="post-meta-item-text">全站字数&#58;</span>
     
-    <span title="全站字数">31.2k</span>
+    <span title="全站字数">32.0k</span>
   
 </div>
 <div class="powered-by">
