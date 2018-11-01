@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://yoursite.com/2018/06/13/</loc>
+    <lastmod>2018-11-01T08:34:30.956Z</lastmod>
+    <data>
+        <display>
+        <title>如何用C语言写一个简易的截屏程序</title>
+        <pubTime>2018-06-13T11:06:38.000Z</pubTime>
+        
+        <tag>小工具</tag>
+         
+         
+           
+             
+              <breadCrumb title="C语言" url="http://yoursite.com/categories/C%E8%AF%AD%E8%A8%80/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2018/10/29/</loc>
     <lastmod>2018-10-29T08:02:16.683Z</lastmod>
     <data>
@@ -112,26 +132,6 @@
         <pubTime>2018-05-30T06:18:32.000Z</pubTime>
         
         <tag>游戏</tag>
-         
-         
-           
-             
-              <breadCrumb title="C语言" url="http://yoursite.com/categories/C%E8%AF%AD%E8%A8%80/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2018/06/13/</loc>
-    <lastmod>2018-06-13T12:09:38.751Z</lastmod>
-    <data>
-        <display>
-        <title>如何用C语言写一个简易的截屏程序</title>
-        <pubTime>2018-06-13T11:06:38.000Z</pubTime>
-        
-        <tag>小工具</tag>
          
          
            
