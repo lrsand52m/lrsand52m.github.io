@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[C++内存管理]]></title>
     <url>%2F2018%2F11%2F05%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[]]></content>
       <categories>
         <category>C++</category>
       </categories>
@@ -14,7 +14,13 @@
   <entry>
     <title><![CDATA[进程间通信]]></title>
     <url>%2F2018%2F11%2F04%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[类和对象]]></title>

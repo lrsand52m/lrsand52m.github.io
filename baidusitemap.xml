@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://yoursite.com/2018/11/05/</loc>
-    <lastmod>2018-11-04T09:02:12.763Z</lastmod>
+    <lastmod>2018-11-04T09:05:08.697Z</lastmod>
     <data>
         <display>
         <title>C++内存管理</title>
@@ -25,14 +25,19 @@
     
   <url>
     <loc>http://yoursite.com/2018/11/04/</loc>
-    <lastmod>2018-11-04T08:59:47.210Z</lastmod>
+    <lastmod>2018-11-04T09:04:54.231Z</lastmod>
     <data>
         <display>
         <title>进程间通信</title>
         <pubTime>2018-11-04T08:59:47.000Z</pubTime>
         
+        <tag>Linux</tag>
+         
          
            
+             
+              <breadCrumb title="Linux" url="http://yoursite.com/categories/Linux/"/>
+          
         </display>
     </data>
     </url>
