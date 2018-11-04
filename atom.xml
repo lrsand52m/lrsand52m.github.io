@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-10-29T08:02:16.683Z</updated>
+  <updated>2018-11-04T09:02:12.763Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C++内存管理</title>
+    <link href="http://yoursite.com/2018/11/05/"/>
+    <id>http://yoursite.com/2018/11/05/</id>
+    <published>2018-11-05T09:00:45.000Z</published>
+    <updated>2018-11-04T09:02:12.763Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="C++" scheme="http://yoursite.com/categories/C/"/>
+    
+    
+      <category term="C++" scheme="http://yoursite.com/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>进程间通信</title>
+    <link href="http://yoursite.com/2018/11/04/"/>
+    <id>http://yoursite.com/2018/11/04/</id>
+    <published>2018-11-04T08:59:47.000Z</published>
+    <updated>2018-11-04T08:59:47.210Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>类和对象</title>
