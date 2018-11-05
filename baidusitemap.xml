@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://yoursite.com/2018/11/05/</loc>
+    <lastmod>2018-11-05T11:23:04.953Z</lastmod>
+    <data>
+        <display>
+        <title>C++内存管理</title>
+        <pubTime>2018-11-05T09:00:45.000Z</pubTime>
+        
+        <tag>C++</tag>
+         
+         
+           
+             
+              <breadCrumb title="C++" url="http://yoursite.com/categories/C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2018/11/04/</loc>
     <lastmod>2018-11-05T11:19:45.541Z</lastmod>
     <data>
@@ -30,26 +50,6 @@
         <display>
         <title>C++模板</title>
         <pubTime>2018-11-06T10:27:02.000Z</pubTime>
-        
-        <tag>C++</tag>
-         
-         
-           
-             
-              <breadCrumb title="C++" url="http://yoursite.com/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2018/11/05/</loc>
-    <lastmod>2018-11-04T09:05:08.697Z</lastmod>
-    <data>
-        <display>
-        <title>C++内存管理</title>
-        <pubTime>2018-11-05T09:00:45.000Z</pubTime>
         
         <tag>C++</tag>
          
