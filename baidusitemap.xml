@@ -4,15 +4,20 @@
 
     
   <url>
-    <loc>http://yoursite.com/2018/11/05/</loc>
-    <lastmod>2018-11-05T10:27:02.435Z</lastmod>
+    <loc>http://yoursite.com/2018/11/06/</loc>
+    <lastmod>2018-11-05T10:30:25.529Z</lastmod>
     <data>
         <display>
         <title>C++模板</title>
-        <pubTime>2018-11-05T10:27:02.000Z</pubTime>
+        <pubTime>2018-11-06T10:27:02.000Z</pubTime>
         
+        <tag>C++</tag>
+         
          
            
+             
+              <breadCrumb title="C++" url="http://yoursite.com/categories/C/"/>
+          
         </display>
     </data>
     </url>

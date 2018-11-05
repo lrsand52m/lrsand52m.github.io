@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-11-05T10:27:02.435Z</updated>
+  <updated>2018-11-05T10:30:25.529Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -18,15 +18,27 @@
   
   <entry>
     <title>C++模板</title>
-    <link href="http://yoursite.com/2018/11/05/"/>
-    <id>http://yoursite.com/2018/11/05/</id>
-    <published>2018-11-05T10:27:02.000Z</published>
-    <updated>2018-11-05T10:27:02.435Z</updated>
+    <link href="http://yoursite.com/2018/11/06/"/>
+    <id>http://yoursite.com/2018/11/06/</id>
+    <published>2018-11-06T10:27:02.000Z</published>
+    <updated>2018-11-05T10:30:25.529Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a>]]></content>
     
     <summary type="html">
     
+      
+      
+        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+
+      
+    
     </summary>
     
+      <category term="C++" scheme="http://yoursite.com/categories/C/"/>
+    
+    
+      <category term="C++" scheme="http://yoursite.com/tags/C/"/>
     
   </entry>
   
