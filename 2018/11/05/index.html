@@ -95,18 +95,18 @@
 
 
 
-<meta name="description" content="在c++中内存主要分为5个存储区： 栈（Stack）：局部变量，函数参数等存储在该区，由编译器自动分配和释放.栈属于计算机系统的数据结构，进栈出栈有相应的计算机指令支持，而且分配专门的寄存器存储栈的地址，效率分高，内存空间是连续的，但栈的内存空间有限。 堆(Heap)：需要程序员手动分配和释放（new,delete），属于动态分配方式。内存空间几乎没有限制，内存空间不连续，因此会产生内存碎片。操">
+<meta name="description" content="总结了一部分内存管理的知识">
 <meta name="keywords" content="C++">
 <meta property="og:type" content="article">
 <meta property="og:title" content="C++内存管理">
 <meta property="og:url" content="http://yoursite.com/2018/11/05/index.html">
 <meta property="og:site_name" content="LRS&#39;s Blog">
-<meta property="og:description" content="在c++中内存主要分为5个存储区： 栈（Stack）：局部变量，函数参数等存储在该区，由编译器自动分配和释放.栈属于计算机系统的数据结构，进栈出栈有相应的计算机指令支持，而且分配专门的寄存器存储栈的地址，效率分高，内存空间是连续的，但栈的内存空间有限。 堆(Heap)：需要程序员手动分配和释放（new,delete），属于动态分配方式。内存空间几乎没有限制，内存空间不连续，因此会产生内存碎片。操">
+<meta property="og:description" content="总结了一部分内存管理的知识">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-05T11:23:04.953Z">
+<meta property="og:updated_time" content="2018-11-05T11:44:11.619Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++内存管理">
-<meta name="twitter:description" content="在c++中内存主要分为5个存储区： 栈（Stack）：局部变量，函数参数等存储在该区，由编译器自动分配和释放.栈属于计算机系统的数据结构，进栈出栈有相应的计算机指令支持，而且分配专门的寄存器存储栈的地址，效率分高，内存空间是连续的，但栈的内存空间有限。 堆(Heap)：需要程序员手动分配和释放（new,delete），属于动态分配方式。内存空间几乎没有限制，内存空间不连续，因此会产生内存碎片。操">
+<meta name="twitter:description" content="总结了一部分内存管理的知识">
 
 
 
@@ -405,7 +405,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,770 字
+                  1,783 字
                 </span>
               
 
@@ -445,7 +445,7 @@
       
 
       
-        <a id="more"></a>
+        <p>总结了一部分内存管理的知识<br><a id="more"></a></p>
 <p>在c++中内存主要分为5个存储区：</p>
 <p>栈（Stack）：局部变量，函数参数等存储在该区，由编译器自动分配和释放.栈属于计算机系统的数据结构，进栈出栈有相应的计算机指令支持，而且分配专门的寄存器存储栈的地址，效率分高，内存空间是连续的，但栈的内存空间有限。</p>
 <p>堆(Heap)：需要程序员手动分配和释放（new,delete），属于动态分配方式。内存空间几乎没有限制，内存空间不连续，因此会产生内存碎片。操作系统有一个记录空间内存的链表，当收到内存申请时遍历链表，找到第一个空间大于申请空间的堆节点，将该节点分配给程序，并将该节点从链表中删除。一般，系统会在该内存空间的首地址处记录本次分配的内存大小，用于delete释放该内存空间。</p>
