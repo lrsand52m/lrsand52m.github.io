@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[C++模板]]></title>
     <url>%2F2018%2F11%2F06%2F</url>
-    <content type="text"><![CDATA[]]></content>
+    <content type="text"><![CDATA[说完了C++的内存管理，今天我们讲讲泛型编程的基础：模板 函数模板类模板]]></content>
       <categories>
         <category>C++</category>
       </categories>

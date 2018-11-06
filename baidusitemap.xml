@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://yoursite.com/2018/11/06/</loc>
+    <lastmod>2018-11-06T06:44:28.355Z</lastmod>
+    <data>
+        <display>
+        <title>C++模板</title>
+        <pubTime>2018-11-06T10:27:02.000Z</pubTime>
+        
+        <tag>C++</tag>
+         
+         
+           
+             
+              <breadCrumb title="C++" url="http://yoursite.com/categories/C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2018/11/05/</loc>
     <lastmod>2018-11-06T06:41:55.901Z</lastmod>
     <data>
@@ -37,26 +57,6 @@
            
              
               <breadCrumb title="Linux" url="http://yoursite.com/categories/Linux/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2018/11/06/</loc>
-    <lastmod>2018-11-05T10:30:25.529Z</lastmod>
-    <data>
-        <display>
-        <title>C++模板</title>
-        <pubTime>2018-11-06T10:27:02.000Z</pubTime>
-        
-        <tag>C++</tag>
-         
-         
-           
-             
-              <breadCrumb title="C++" url="http://yoursite.com/categories/C/"/>
           
         </display>
     </data>
