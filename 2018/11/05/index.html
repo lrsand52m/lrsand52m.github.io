@@ -103,7 +103,7 @@
 <meta property="og:site_name" content="LRS&#39;s Blog">
 <meta property="og:description" content="总结了一部分内存管理的知识">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-06T06:39:55.660Z">
+<meta property="og:updated_time" content="2018-11-06T06:41:55.901Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++内存管理">
 <meta name="twitter:description" content="总结了一部分内存管理的知识">
@@ -405,7 +405,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  2,948 字
+                  3,265 字
                 </span>
               
 
@@ -421,7 +421,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  11 分钟
+                  12 分钟
                 </span>
               
             </div>
@@ -455,6 +455,17 @@
 <h3 id="operator-new与operator-delete函数"><a href="#operator-new与operator-delete函数" class="headerlink" title="operator new与operator delete函数"></a>operator new与operator delete函数</h3><p>new和delete是用户进行动态内存申请和释放的操作符，operator new 和operator delete是系统提供的全局函数，new在底层调用operator new全局函数来申请空间，delete在底层通过operator delete全局函数来释放空间。<br><strong>联系</strong><br>一般来说<br>operator new = malloc+构造函数（若是自定义类型）+失败抛异常<br>operator delete = free+析构函数（若是自定义类型）+失败抛异常<br><strong>注意</strong>：operator new和operator delete用户也可以自己实现，用户实现时即可实现成全局函数，也可实现成类的成员函数，但是一般情况下不需要实现，除非有特殊需求。  </p>
 <h3 id="new与malloc，delete与free的区别"><a href="#new与malloc，delete与free的区别" class="headerlink" title="new与malloc，delete与free的区别"></a>new与malloc，delete与free的区别</h3><h4 id="内置类型"><a href="#内置类型" class="headerlink" title="内置类型"></a>内置类型</h4><p>如果申请的是内置类型的空间，new和malloc，delete和free基本类似，不同的地方是：new/delete申请和释放的是单个元素的空间，new[]和delete[]申请的是连续空间，而且new在申请空间失败时会抛异常，malloc会返回NULL。</p>
 <h4 id="自定义类型"><a href="#自定义类型" class="headerlink" title="自定义类型"></a>自定义类型</h4><p>new的原理<br>1.调用operator new函数申请空间<br>2.在申请的空间上执行构造函数，完成对象的构造<br>delete的原理<br>1 在空间上执行析构函数，完成对象中资源的清理工作<br>2.调用operator delete函数释放对象的空间<br>new T[N]的原理<br>1.调用operator new[]函数，在operator new[]中实际调用operator new函数完成N个对象空间的申<br>请<br>2.在申请的空间上执行N次构造函数<br>delete[]的原理<br>1.在释放的对象空间上执行N次析构函数，完成N个对象中资源的清理<br>2.调用operator delete[]释放空间，实际在operator delete[]中调用operator delete来释放空间<br>malloc与free<br>正常的申请释放，无明显差别  </p>
+<h4 id="其他区别"><a href="#其他区别" class="headerlink" title="其他区别"></a>其他区别</h4><p>malloc/free和new/delete的区别<br>malloc/free和new/delete的共同点是：都是从堆上申请空间，并且需要用户手动释放。不同的地方是：</p>
+<ol>
+<li>malloc和free是函数，new和delete是操作符</li>
+<li>malloc申请的空间不能初始化，new可以初始化</li>
+<li>malloc申请空间时，需要手动计算空间大小并传递，new只需在其后跟上空间的类型即可</li>
+<li>malloc的返回值为void*, 在使用时必须强转，new不需要，因为new后跟的是空间的类型</li>
+<li>malloc申请空间失败时，返回的是NULL，因此使用时必须判空，new不需要，但是new需要捕获异常</li>
+<li>malloc/free只能申请内置类型的空间，不能申请自定义类型的空间，因为其不会调用构造与析构函数，<br>而new可以，new在申请空间后会调用构造函数完成对象的构造，delete在释放空间前会调用析构函数<br>完成空间中资源的清理</li>
+<li>malloc申请的空间一定在堆上，new不一定，因为operator new函数可以重新实现</li>
+<li>new/delete比malloc和free的效率稍微低点，因为new/delete的底层封装了malloc/free  </li>
+</ol>
 
       
     </div>
@@ -876,7 +887,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#堆和栈的区别："><span class="nav-number">1.</span> <span class="nav-text">堆和栈的区别：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#malloc-calloc-realloc-的区别"><span class="nav-number">2.</span> <span class="nav-text">malloc calloc realloc 的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#在申请自定义类型的空间时，new会调用构造函数，delete会调用析构函数，而malloc与free不会。"><span class="nav-number">2.1.</span> <span class="nav-text">在申请自定义类型的空间时，new会调用构造函数，delete会调用析构函数，而malloc与free不会。</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#operator-new与operator-delete函数"><span class="nav-number">3.</span> <span class="nav-text">operator new与operator delete函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#new与malloc，delete与free的区别"><span class="nav-number">4.</span> <span class="nav-text">new与malloc，delete与free的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#内置类型"><span class="nav-number">4.1.</span> <span class="nav-text">内置类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#自定义类型"><span class="nav-number">4.2.</span> <span class="nav-text">自定义类型</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#堆和栈的区别："><span class="nav-number">1.</span> <span class="nav-text">堆和栈的区别：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#malloc-calloc-realloc-的区别"><span class="nav-number">2.</span> <span class="nav-text">malloc calloc realloc 的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#在申请自定义类型的空间时，new会调用构造函数，delete会调用析构函数，而malloc与free不会。"><span class="nav-number">2.1.</span> <span class="nav-text">在申请自定义类型的空间时，new会调用构造函数，delete会调用析构函数，而malloc与free不会。</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#operator-new与operator-delete函数"><span class="nav-number">3.</span> <span class="nav-text">operator new与operator delete函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#new与malloc，delete与free的区别"><span class="nav-number">4.</span> <span class="nav-text">new与malloc，delete与free的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#内置类型"><span class="nav-number">4.1.</span> <span class="nav-text">内置类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#自定义类型"><span class="nav-number">4.2.</span> <span class="nav-text">自定义类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#其他区别"><span class="nav-number">4.3.</span> <span class="nav-text">其他区别</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -911,7 +922,7 @@
     
       <span class="post-meta-item-text">全站字数&#58;</span>
     
-    <span title="全站字数">40.8k</span>
+    <span title="全站字数">41.2k</span>
   
 </div>
 <div class="powered-by">
