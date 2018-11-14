@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://yoursite.com/2018/05/29/</loc>
+    <lastmod>2018-11-14T14:40:37.630Z</lastmod>
+    <data>
+        <display>
+        <title>创建动态通讯录</title>
+        <pubTime>2018-05-29T09:56:35.000Z</pubTime>
+        
+        <tag>结构体</tag>
+         
+         
+           
+             
+              <breadCrumb title="C语言" url="http://yoursite.com/categories/C%E8%AF%AD%E8%A8%80/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2018/06/08/</loc>
     <lastmod>2018-11-14T14:37:33.158Z</lastmod>
     <data>
@@ -298,26 +318,6 @@
         <pubTime>2018-06-02T15:25:10.000Z</pubTime>
         
         <tag>游戏</tag>
-         
-         
-           
-             
-              <breadCrumb title="C语言" url="http://yoursite.com/categories/C%E8%AF%AD%E8%A8%80/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2018/05/28/</loc>
-    <lastmod>2018-05-31T01:03:25.340Z</lastmod>
-    <data>
-        <display>
-        <title>创建动态通讯录</title>
-        <pubTime>2018-05-28T09:56:35.000Z</pubTime>
-        
-        <tag>结构体</tag>
          
          
            
