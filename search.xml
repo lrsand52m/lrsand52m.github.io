@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[深度理解函数栈帧]]></title>
     <url>%2F2018%2F11%2F14%2F</url>
-    <content type="text"><![CDATA[一直说main函数是程序的入口，然后我就看见在这之前还发生了些不为人知的事…打开调试时的查看函数调用堆栈你就会发现在调用main函数之前，我们的程序先后先调用了mainCRTStartup和__tmainCRTStartup函数…为求甚解，我继续调查了函数调用的相关知识，发现函数的调用也是有相当多讲究的~ 先认识两个寄存器这么两个寄存器一个是esp，存储栈顶的地址 另一个是ebp，存储栈底的地址之前说了在调用main函数之前我们已经调用过了其它函数，main函数也会拥有自己的栈空间我们随便写一小段代码：1234567891011121314int add(int x,int y)&#123; int z = 0; z = x + y; return z;&#125;int main()&#123; int a = 10; int b = 20; int c = 0; c = add(a,b); return 0;&#125; 进入调试打开反汇编看一下main函数开始后发生了什么：1234567push ebpmov ebp, espsub esp, 4Ch...lea edi, [ebp-4Ch]...rep stos dword ptr [edi] 就这样简单的几步，main函数的栈帧就开好啦]]></content>
+    <content type="text"><![CDATA[一直说main函数是程序的入口，然后我就看见在这之前还发生了些不为人知的事…打开调试时的查看函数调用堆栈你就会发现在调用main函数之前，我们的程序先后先调用了mainCRTStartup和__tmainCRTStartup函数…为求甚解，我继续调查了函数调用的相关知识，发现函数的调用也是有相当多讲究的~ 先认识两个寄存器这么两个寄存器一个是esp，存储栈顶的地址 另一个是ebp，存储栈底的地址之前说了在调用main函数之前我们已经调用过了其它函数，main函数也会拥有自己的栈空间我们随便写一小段代码：1234567891011121314int add(int x,int y)&#123; int z = 0; z = x + y; return z;&#125;int main()&#123; int a = 10; int b = 20; int c = 0; c = add(a,b); return 0;&#125; 进入调试打开反汇编看一下main函数开始后发生了什么：12345678910push ebp 将ebp的值压栈mov ebp, esp 将esp的值赋给ebpsub esp, 4Ch 将esp的值减去0x4Cpush ebx push esipush edi 将ebx,esi,edi压栈lea edi, [ebp-4Ch] 将ebp减去0x4C这个地址赋给edimov ecx, 13h 将0x13赋给ecxmov eax, 0CCCCCCCCh 将0xCCCCCCCC赋给eaxrep stos dword ptr [edi] 从edi地址处每次拷贝eax4个字节的内容重复ecx次 就这样简单的几步，main函数的栈帧就开好啦]]></content>
       <categories>
         <category>C</category>
       </categories>
