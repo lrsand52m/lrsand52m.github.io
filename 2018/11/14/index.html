@@ -103,7 +103,7 @@
 <meta property="og:site_name" content="LRS&#39;s Blog">
 <meta property="og:description" content="一直说main函数是程序的入口，然后我就看见在这之前还发生了些不为人知的事…">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-19T04:52:29.783Z">
+<meta property="og:updated_time" content="2018-11-19T05:40:54.499Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="深度理解函数栈帧">
 <meta name="twitter:description" content="一直说main函数是程序的入口，然后我就看见在这之前还发生了些不为人知的事…">
@@ -405,7 +405,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  126 字
+                  305 字
                 </span>
               
 
@@ -445,8 +445,10 @@
       
 
       
-        <p>一直说main函数是程序的入口，然后我就看见在这之前还发生了些不为人知的事…<br><a id="more"></a><br>打开调试时的查看栈帧你就会发现在调用main函数之前，<br>我们的程序先后先调用了mainCRTStartup和__tmainCRTStartup函数…<br>为求甚解，我继续调查了函数调用的相关知识，发现函数的调用也是有相当多讲究的~</p>
-<h3 id="先认识两个寄存器"><a href="#先认识两个寄存器" class="headerlink" title="先认识两个寄存器"></a>先认识两个寄存器</h3><p>这么两个寄存器一个是ebp esp</p>
+        <p>一直说main函数是程序的入口，然后我就看见在这之前还发生了些不为人知的事…<br><a id="more"></a><br>打开调试时的查看函数调用堆栈你就会发现在调用main函数之前，<br>我们的程序先后先调用了mainCRTStartup和__tmainCRTStartup函数…<br>为求甚解，我继续调查了函数调用的相关知识，发现函数的调用也是有相当多讲究的~</p>
+<h3 id="先认识两个寄存器"><a href="#先认识两个寄存器" class="headerlink" title="先认识两个寄存器"></a>先认识两个寄存器</h3><p>这么两个寄存器一个是esp，存储栈顶的地址 另一个是ebp，存储栈底的地址<br>之前说了在调用main函数之前我们已经调用过了其它函数，main函数也会拥有自己的栈空间<br>我们随便写一小段代码：<br><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> z = <span class="number">0</span>;</span><br><span class="line">  z = x + y;</span><br><span class="line">  <span class="keyword">return</span> z;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> a = <span class="number">10</span>;</span><br><span class="line">  <span class="keyword">int</span> b = <span class="number">20</span>;</span><br><span class="line">  <span class="keyword">int</span> c = <span class="number">0</span>;</span><br><span class="line">  c = add(a,b);</span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>进入调试打开反汇编看一下main函数开始后发生了什么：<br><img src="" alt="栈帧示意"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">push ebp</span><br><span class="line">mov  ebp, esp</span><br><span class="line">sub  esp, 4Ch</span><br><span class="line">...</span><br><span class="line">lea  edi, [ebp-4Ch]</span><br><span class="line">...</span><br><span class="line">rep  stos dword ptr [edi]</span><br></pre></td></tr></table></figure></p>
+<p>就这样简单的几步，main函数的栈帧就开好啦</p>
 
       
     </div>
@@ -899,7 +901,7 @@
     
       <span class="post-meta-item-text">全站字数&#58;</span>
     
-    <span title="全站字数">41.3k</span>
+    <span title="全站字数">41.5k</span>
   
 </div>
 <div class="powered-by">
