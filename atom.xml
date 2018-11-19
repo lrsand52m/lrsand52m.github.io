@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-11-14T14:52:33.351Z</updated>
+  <updated>2018-11-19T04:52:29.783Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://yoursite.com/2018/11/14/"/>
     <id>http://yoursite.com/2018/11/14/</id>
     <published>2018-11-14T14:42:52.000Z</published>
-    <updated>2018-11-14T14:52:33.351Z</updated>
+    <updated>2018-11-19T04:52:29.783Z</updated>
     
-    <content type="html"><![CDATA[<p>一直说main函数是程序的入口，然后我就看见在这之前还发生了些不为人知的事…<br><a id="more"></a><br>打开调试时的查看栈帧你就会发现在调用main函数之前，<br>我们的程序先后先调用了mainCRTStartup和__tmainCRTStartup函数…<br>为求甚解，我继续调查了函数调用的相关知识，发现函数的调用也是有相当多讲究的~</p><p>编辑中….</p>]]></content>
+    <content type="html"><![CDATA[<p>一直说main函数是程序的入口，然后我就看见在这之前还发生了些不为人知的事…<br><a id="more"></a><br>打开调试时的查看栈帧你就会发现在调用main函数之前，<br>我们的程序先后先调用了mainCRTStartup和__tmainCRTStartup函数…<br>为求甚解，我继续调查了函数调用的相关知识，发现函数的调用也是有相当多讲究的~</p><h3 id="先认识两个寄存器"><a href="#先认识两个寄存器" class="headerlink" title="先认识两个寄存器"></a>先认识两个寄存器</h3><p>这么两个寄存器一个是ebp esp</p>]]></content>
     
     <summary type="html">
     

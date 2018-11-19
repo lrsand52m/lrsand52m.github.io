@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[深度理解函数栈帧]]></title>
     <url>%2F2018%2F11%2F14%2F</url>
-    <content type="text"><![CDATA[一直说main函数是程序的入口，然后我就看见在这之前还发生了些不为人知的事…打开调试时的查看栈帧你就会发现在调用main函数之前，我们的程序先后先调用了mainCRTStartup和__tmainCRTStartup函数…为求甚解，我继续调查了函数调用的相关知识，发现函数的调用也是有相当多讲究的~ 编辑中….]]></content>
+    <content type="text"><![CDATA[一直说main函数是程序的入口，然后我就看见在这之前还发生了些不为人知的事…打开调试时的查看栈帧你就会发现在调用main函数之前，我们的程序先后先调用了mainCRTStartup和__tmainCRTStartup函数…为求甚解，我继续调查了函数调用的相关知识，发现函数的调用也是有相当多讲究的~ 先认识两个寄存器这么两个寄存器一个是ebp esp]]></content>
       <categories>
         <category>C</category>
       </categories>
