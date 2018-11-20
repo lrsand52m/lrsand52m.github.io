@@ -43,9 +43,9 @@
     <link href="http://yoursite.com/2018/11/06/"/>
     <id>http://yoursite.com/2018/11/06/</id>
     <published>2018-11-06T10:27:02.000Z</published>
-    <updated>2018-11-14T14:41:12.939Z</updated>
+    <updated>2018-11-20T01:47:29.791Z</updated>
     
-    <content type="html"><![CDATA[<p>说完了C++的内存管理，今天我们讲讲泛型编程的基础：模板<br><a id="more"></a></p><h1 id="函数模板"><a href="#函数模板" class="headerlink" title="函数模板"></a>函数模板</h1><p>&lt;正在编辑中…&gt;</p><h1 id="类模板"><a href="#类模板" class="headerlink" title="类模板"></a>类模板</h1>]]></content>
+    <content type="html"><![CDATA[<p>说完了C++的内存管理，今天我们讲讲泛型编程的基础：模板<br><a id="more"></a></p><h3 id="先说上那么两句"><a href="#先说上那么两句" class="headerlink" title="先说上那么两句"></a>先说上那么两句</h3><h1 id="函数模板"><a href="#函数模板" class="headerlink" title="函数模板"></a>函数模板</h1><h1 id="类模板"><a href="#类模板" class="headerlink" title="类模板"></a>类模板</h1>]]></content>
     
     <summary type="html">
     
