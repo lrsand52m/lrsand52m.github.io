@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-11-20T05:05:48.444Z</updated>
+  <updated>2018-12-04T12:18:49.681Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>容易爆炸的volatile</title>
+    <link href="http://yoursite.com/2018/12/04/"/>
+    <id>http://yoursite.com/2018/12/04/</id>
+    <published>2018-12-04T12:15:22.000Z</published>
+    <updated>2018-12-04T12:18:49.681Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>前几天测试空循环速度时发生了一些匪夷所思的事情，经过调查，我锁定了凶手：关键字volatile</strong><br><a id="more"></a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;strong&gt;前几天测试空循环速度时发生了一些匪夷所思的事情，经过调查，我锁定了凶手：关键字volatile&lt;/strong&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="C++" scheme="http://yoursite.com/categories/C/"/>
+    
+    
+      <category term="C++" scheme="http://yoursite.com/tags/C/"/>
+    
+  </entry>
   
   <entry>
     <title>深度理解函数栈帧</title>
@@ -445,28 +467,6 @@
     
     
       <category term="博客搭建" scheme="http://yoursite.com/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>主要元素求法及优化</title>
-    <link href="http://yoursite.com/2018/05/21/"/>
-    <id>http://yoursite.com/2018/05/21/</id>
-    <published>2018-05-21T11:15:25.000Z</published>
-    <updated>2018-05-21T11:36:01.597Z</updated>
-    
-    <content type="html"><![CDATA[<p>在一本书中，我看到这样一道题：<strong>已知一个数组中有一个元素的出现次数占所有元素个数一半以上，找出这个元素。</strong></p><a id="more"></a><p>我想：真简单！</p><p>是的，两个for循环能解决的问题，的确不能说难。</p><p>但是，两个for循环的确有些浪费，效率也奇低，有点儿“拿不出手”，所以我开始思索如何简化算法（日常思索）：</p><p>突然我心生一计：既然出现的频率这么高，那我对这个数组排完序，出现在中间的数不就是这个主要元素吗？</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">1. 假设数组为：5 4 3 3 3 2 3 1 3  </span><br><span class="line">2. 排完序后为：1 2 3 3 3 3 3 4 5</span><br></pre></td></tr></table></figure><p>这样这个算法的时间复杂度就完全取决于我排序算法的时间复杂度了</p><p>真是令人振奋呢：排序有三种不同时间复杂度的：</p><table><thead><tr><th style="text-align:center">排序方法</th><th style="text-align:center">复杂度</th><th style="text-align:center">推荐程度</th></tr></thead><tbody><tr><td style="text-align:center">冒泡排序</td><td style="text-align:center">O(N^2)</td><td style="text-align:center">**</td></tr><tr><td style="text-align:center">桶排序</td><td style="text-align:center">O(N)</td><td style="text-align:center">**</td></tr><tr><td style="text-align:center">快速排序</td><td style="text-align:center">O(NlogN)</td><td style="text-align:center">***</td></tr><tr><td style="text-align:center">…</td><td style="text-align:center">…</td><td style="text-align:center">…</td></tr></tbody></table><p>当然这里只推荐快排，因为我们给出的数值范围不确定，这样桶排序极其容易浪费掉大量内存，也是“拿不出手”的。</p><p>但是快排的时间复杂度也不能说是很低，能不能更加简化呢？比如说O(N)或者O(logN)？</p><p>好吧，我们是理智人，O(logN)就有点逆天，毕竟读入数组就不止这个复杂度了。</p><p>所以我们重点讨论O(N)的情形：</p><p>消除法：因为占的”份额”实在是多，所以主要元素就是与其他元素一一消除，最终剩下的数也绝对是主元素，所以我们可以考虑用这个方法来“消”出这个主要元素。</p><p>这样我们就创造一个计数器k，当遇到相同元素+1，不同减一，很容易知道最终结果必为正数。不过中间过程中会遇到为0的情况，这样我们就初始化k的值，并且把他的指向保存到下一位就行了。</p><p>在指完整个数组后，最近保存的指向肯定就是主要元素啦！（想想为什么）</p><p>代码附上：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span>  </span></span><br><span class="line"><span class="function"></span>&#123;  </span><br><span class="line">    <span class="keyword">int</span> n;  </span><br><span class="line">    <span class="keyword">int</span> a[<span class="number">100</span>] = &#123;<span class="number">0</span>&#125;;  </span><br><span class="line">    <span class="keyword">int</span> book = <span class="number">1</span>;<span class="comment">//提供消除依据  </span></span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">0</span>;  </span><br><span class="line">    <span class="keyword">int</span> num = <span class="number">0</span>;<span class="comment">//记录当前比较的数  </span></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;n);  </span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>; i&lt;n; i++)  </span><br><span class="line">    &#123;  </span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;a[i]);  </span><br><span class="line">    &#125;  </span><br><span class="line">    i = <span class="number">1</span>;  </span><br><span class="line">    <span class="keyword">if</span>(<span class="number">1</span> == n);  </span><br><span class="line">    <span class="keyword">else</span>  </span><br><span class="line">    &#123;  </span><br><span class="line">        <span class="keyword">while</span>(i&lt;n)  </span><br><span class="line">        &#123;  </span><br><span class="line">            <span class="keyword">if</span>(a[i] == a[num])  </span><br><span class="line">            &#123;  </span><br><span class="line">                book++;<span class="comment">//相等book+1，数组元素向后寻找  </span></span><br><span class="line">                i++;  </span><br><span class="line">            &#125;  </span><br><span class="line">            <span class="keyword">else</span>   </span><br><span class="line">            &#123;  </span><br><span class="line">                book--;<span class="comment">//不等-1  </span></span><br><span class="line">                <span class="keyword">if</span>(!book)  </span><br><span class="line">                &#123;  </span><br><span class="line">                    i++;<span class="comment">//book=0时，标记数也之移动  </span></span><br><span class="line">                    num = i;  </span><br><span class="line">                &#125;  </span><br><span class="line">                <span class="keyword">else</span> i++;  </span><br><span class="line">            &#125;  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"主元素为：%d\n"</span>,a[num]);<span class="comment">//主要元素肯定是标记的数，输出就行  </span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;在一本书中，我看到这样一道题：&lt;strong&gt;已知一个数组中有一个元素的出现次数占所有元素个数一半以上，找出这个元素。&lt;/strong&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="算法" scheme="http://yoursite.com/categories/%E7%AE%97%E6%B3%95/"/>
-    
-    
-      <category term="数组运算" scheme="http://yoursite.com/tags/%E6%95%B0%E7%BB%84%E8%BF%90%E7%AE%97/"/>
     
   </entry>
   
