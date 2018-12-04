@@ -109,7 +109,7 @@
 <meta property="og:image" content="http://yoursite.com/img/volatile/4.png">
 <meta property="og:image" content="http://yoursite.com/img/volatile/3.png">
 <meta property="og:image" content="http://yoursite.com/img/volatile/5.png">
-<meta property="og:updated_time" content="2018-12-04T13:06:32.398Z">
+<meta property="og:updated_time" content="2018-12-04T13:11:49.940Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="容易爆炸的volatile">
 <meta name="twitter:description" content="前几天测试空循环速度时发生了一些匪夷所思的事情，经过调查，我锁定了凶手：关键字volatile">
@@ -412,7 +412,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,064 字
+                  1,066 字
                 </span>
               
 
@@ -461,7 +461,7 @@
 <li>当变量在因别的线程等而改变了值，该寄存器的值不会相应改变，从而造成应用程序读取的值和实际的变量值不一致  </li>
 <li>当该寄存器在因别的线程等而改变了值，原变量的值不会改变，从而造成应用程序读取的值和实际的变量值不一致  </li>
 </ul>
-<h3 id="几个例子"><a href="#几个例子" class="headerlink" title="几个例子"></a>几个例子</h3><p>也就是说，我们不加上这个关键字，可能会出现一些让我们的现象</p>
+<h3 id="几个例子"><a href="#几个例子" class="headerlink" title="几个例子"></a>几个例子</h3><p>也就是说，我们不加上这个关键字，可能会出现一些让我们费解的现象</p>
 <ul>
 <li>空循环速度<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">test_loop</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">clock_t</span> c1 = clock();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">1000000000</span>; i++);</span><br><span class="line">    <span class="keyword">clock_t</span> c2 = clock();</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">volatile</span> <span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">1000000000</span>; i++);</span><br><span class="line">    <span class="keyword">clock_t</span> c3 = clock();</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; c2 - c1 &lt;&lt; <span class="built_in">endl</span> &lt;&lt; c3 - c2&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
@@ -931,7 +931,7 @@
     
       <span class="post-meta-item-text">全站字数&#58;</span>
     
-    <span title="全站字数">44.8k</span>
+    <span title="全站字数">44.9k</span>
   
 </div>
 <div class="powered-by">
