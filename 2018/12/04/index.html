@@ -108,7 +108,8 @@
 <meta property="og:image" content="http://yoursite.com/img/volatile/3.png">
 <meta property="og:image" content="http://yoursite.com/img/volatile/4.png">
 <meta property="og:image" content="http://yoursite.com/img/volatile/3.png">
-<meta property="og:updated_time" content="2018-12-04T12:53:52.780Z">
+<meta property="og:image" content="http://yoursite.com/img/volatile/5.png">
+<meta property="og:updated_time" content="2018-12-04T13:01:04.724Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="容易爆炸的volatile">
 <meta name="twitter:description" content="前几天测试空循环速度时发生了一些匪夷所思的事情，经过调查，我锁定了凶手：关键字volatile">
@@ -411,7 +412,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  809 字
+                  1,064 字
                 </span>
               
 
@@ -427,7 +428,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3 分钟
+                  4 分钟
                 </span>
               
             </div>
@@ -475,7 +476,9 @@
 <li>多线程下volatile带来的不可思议的结果<br>我们先看下面的函数：<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">square</span><span class="params">(<span class="keyword">volatile</span> <span class="keyword">int</span>* &amp;p)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span>  (*p)*(*p);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>看起来是求一个变量平方的函数，但是偏偏是经过volatile修饰的，从而在编译器眼里这个函数是这样的：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">square</span><span class="params">(<span class="keyword">volatile</span> <span class="keyword">int</span>* &amp;p)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a = *p;</span><br><span class="line">  <span class="keyword">int</span> b = *p;</span><br><span class="line">  <span class="keyword">return</span> a*b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>看起来是求一个变量平方的函数，但是偏偏是经过volatile修饰的，从而在编译器眼里这个函数是这样的：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">square</span><span class="params">(<span class="keyword">volatile</span> <span class="keyword">int</span>* &amp;p)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> a = *p;</span><br><span class="line">    <span class="keyword">int</span> b = *p;</span><br><span class="line">    <span class="keyword">return</span> a*b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>如果不在多线程环境里，无非是让编译器多忙了几句，但是一旦在多线程下，其他线程可能会在a,b取值之间改变了*p的值，从而得出错误的结果：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> A = <span class="number">100</span>;</span><br><span class="line"><span class="keyword">volatile</span> <span class="keyword">int</span> *PA = &amp;A;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">square</span><span class="params">(<span class="keyword">volatile</span> <span class="keyword">int</span>* &amp;p)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span>  (*p)*(*p);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">DWORD WINAPI <span class="title">test</span><span class="params">(LPVOID lpParamter)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> ans = square2(PA);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%s  %d\n"</span>,<span class="string">"pthread 1:"</span>,ans);</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">4200000000</span>; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (i*i == ans)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">cout</span> &lt;&lt; <span class="string">"right"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">			<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; <span class="string">"wrong"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">DWORD WINAPI <span class="title">test2</span><span class="params">(LPVOID lpParamter)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (<span class="number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		*PA = i++;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">test_pthread</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	HANDLE hThread2 = CreateThread(<span class="literal">NULL</span>, <span class="number">0</span>, test2, <span class="literal">NULL</span>, <span class="number">0</span>, <span class="literal">NULL</span>);</span><br><span class="line">	HANDLE hThread = CreateThread(<span class="literal">NULL</span>, <span class="number">0</span>, test, <span class="literal">NULL</span>, <span class="number">0</span>, <span class="literal">NULL</span>);</span><br><span class="line">	CloseHandle(hThread);</span><br><span class="line">	CloseHandle(hThread2);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>在test函数里会对函数的出来的结果进行检测，判断是不是一个数的平方（即使溢出也没事）<br>不过我要说的是：即便是在一个线程里不断改变*P的值，出错率还是挺低的~<br><img src="/img/volatile/5.png" alt=""></p>
 
       
     </div>
@@ -928,7 +931,7 @@
     
       <span class="post-meta-item-text">全站字数&#58;</span>
     
-    <span title="全站字数">44.6k</span>
+    <span title="全站字数">44.8k</span>
   
 </div>
 <div class="powered-by">
