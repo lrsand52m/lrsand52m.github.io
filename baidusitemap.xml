@@ -5,14 +5,19 @@
     
   <url>
     <loc>http://yoursite.com/2018/12/05/</loc>
-    <lastmod>2018-12-05T03:46:50.570Z</lastmod>
+    <lastmod>2018-12-05T04:18:06.379Z</lastmod>
     <data>
         <display>
         <title>Linux信号</title>
         <pubTime>2018-12-05T03:46:50.000Z</pubTime>
         
+        <tag>Linux</tag>
+         
          
            
+             
+              <breadCrumb title="系统" url="http://yoursite.com/categories/%E7%B3%BB%E7%BB%9F/"/>
+          
         </display>
     </data>
     </url>
