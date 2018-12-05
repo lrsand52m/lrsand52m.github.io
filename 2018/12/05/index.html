@@ -103,10 +103,12 @@
 <meta property="og:site_name" content="LRS&#39;s Blog">
 <meta property="og:description" content="今天我们说一说Linux下信号的概念和产生~">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-12-05T04:25:41.623Z">
+<meta property="og:image" content="http://yoursite.com/img/signal/1.png">
+<meta property="og:updated_time" content="2018-12-05T04:38:56.366Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux信号">
 <meta name="twitter:description" content="今天我们说一说Linux下信号的概念和产生~">
+<meta name="twitter:image" content="http://yoursite.com/img/signal/1.png">
 
 
 
@@ -405,7 +407,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,554 字
+                  1,714 字
                 </span>
               
 
@@ -463,14 +465,14 @@
 <li>与终端交互相关的信号。如用户关闭一个终端，或按下ctrl+c键等情况。</li>
 <li>跟踪进程执行的信号。</li>
 </ol>
-<p>下面是Linux下的信号表（内容来自百度）</p>
+<p>我们可以用kill -l指令查看信号列表<br><img src="/img/signal/1.png" alt=""><br>超过31的信号是实时信号，我们暂时不讨论<br>下面是Linux下的信号表（内容来自百度）</p>
 <table>
 <thead>
 <tr>
 <th style="text-align:center">信号</th>
 <th style="text-align:center">值</th>
 <th style="text-align:center">处理动作</th>
-<th style="text-align:center">发出动作的原因</th>
+<th style="text-align:center">发出信号的原因</th>
 </tr>
 </thead>
 <tbody>
@@ -771,7 +773,13 @@
 <li>信号SIGKILL和SIGSTOP既不能被捕捉，也不能被忽略。  </li>
 <li>信号SIGIOT与SIGABRT是一个信号。可以看出，同一个信号在不同的系统中值可能不一样，所以建议最好使用为信号定义的名字，而不要直接使用信号的值。</li>
 </ul>
-<h1 id="信号的处理"><a href="#信号的处理" class="headerlink" title="信号的处理"></a>信号的处理</h1>
+<h1 id="信号的处理"><a href="#信号的处理" class="headerlink" title="信号的处理"></a>信号的处理</h1><p>对于进程来说，不能判别是否出现一个信号，而是必须要告诉内核信号出现的时候，执行下列操作。<br>信号的处理方式有三种：</p>
+<ol>
+<li>忽略此信号</li>
+<li>执行信号的默认处理动作(就是上面表里的动作)。</li>
+<li>提供自定义行为，要求处理该信号的时候切换到用户态执行这个处理函数，也叫做捕捉一信号(如上，有些信号无法捕捉)。</li>
+</ol>
+
       
     </div>
     
@@ -1223,7 +1231,7 @@
     
       <span class="post-meta-item-text">全站字数&#58;</span>
     
-    <span title="全站字数">46.4k</span>
+    <span title="全站字数">46.6k</span>
   
 </div>
 <div class="powered-by">
