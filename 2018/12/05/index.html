@@ -104,7 +104,7 @@
 <meta property="og:description" content="今天我们说一说Linux下信号的概念和产生~">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/img/signal/1.png">
-<meta property="og:updated_time" content="2018-12-05T04:38:56.366Z">
+<meta property="og:updated_time" content="2018-12-05T04:46:04.386Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Linux信号">
 <meta name="twitter:description" content="今天我们说一说Linux下信号的概念和产生~">
@@ -407,7 +407,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,714 字
+                  1,770 字
                 </span>
               
 
@@ -779,7 +779,7 @@
 <li>执行信号的默认处理动作(就是上面表里的动作)。</li>
 <li>提供自定义行为，要求处理该信号的时候切换到用户态执行这个处理函数，也叫做捕捉一信号(如上，有些信号无法捕捉)。</li>
 </ol>
-
+<h1 id="信号递达"><a href="#信号递达" class="headerlink" title="信号递达"></a>信号递达</h1><h2 id="递达之前。。"><a href="#递达之前。。" class="headerlink" title="递达之前。。"></a>递达之前。。</h2><h3 id="通过系统调用产生信号"><a href="#通过系统调用产生信号" class="headerlink" title="通过系统调用产生信号"></a>通过系统调用产生信号</h3><h3 id="软件信号"><a href="#软件信号" class="headerlink" title="软件信号"></a>软件信号</h3><h2 id="信号阻塞"><a href="#信号阻塞" class="headerlink" title="信号阻塞"></a>信号阻塞</h2><h3 id="阻塞概念"><a href="#阻塞概念" class="headerlink" title="阻塞概念"></a>阻塞概念</h3><h3 id="信号集"><a href="#信号集" class="headerlink" title="信号集"></a>信号集</h3><h1 id="信号捕捉"><a href="#信号捕捉" class="headerlink" title="信号捕捉"></a>信号捕捉</h1><h1 id="信号、可重入函数与线程安全"><a href="#信号、可重入函数与线程安全" class="headerlink" title="信号、可重入函数与线程安全"></a>信号、可重入函数与线程安全</h1><h1 id="信号与竞态条件"><a href="#信号与竞态条件" class="headerlink" title="信号与竞态条件"></a>信号与竞态条件</h1>
       
     </div>
     
@@ -1196,7 +1196,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#信号的概念"><span class="nav-number">1.</span> <span class="nav-text">信号的概念</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#信号的产生"><span class="nav-number">2.</span> <span class="nav-text">信号的产生</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#信号的处理"><span class="nav-number">3.</span> <span class="nav-text">信号的处理</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#信号的概念"><span class="nav-number">1.</span> <span class="nav-text">信号的概念</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#信号的产生"><span class="nav-number">2.</span> <span class="nav-text">信号的产生</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#信号的处理"><span class="nav-number">3.</span> <span class="nav-text">信号的处理</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#信号递达"><span class="nav-number">4.</span> <span class="nav-text">信号递达</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#递达之前。。"><span class="nav-number">4.1.</span> <span class="nav-text">递达之前。。</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#通过系统调用产生信号"><span class="nav-number">4.1.1.</span> <span class="nav-text">通过系统调用产生信号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#软件信号"><span class="nav-number">4.1.2.</span> <span class="nav-text">软件信号</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#信号阻塞"><span class="nav-number">4.2.</span> <span class="nav-text">信号阻塞</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#阻塞概念"><span class="nav-number">4.2.1.</span> <span class="nav-text">阻塞概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#信号集"><span class="nav-number">4.2.2.</span> <span class="nav-text">信号集</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#信号捕捉"><span class="nav-number">5.</span> <span class="nav-text">信号捕捉</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#信号、可重入函数与线程安全"><span class="nav-number">6.</span> <span class="nav-text">信号、可重入函数与线程安全</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#信号与竞态条件"><span class="nav-number">7.</span> <span class="nav-text">信号与竞态条件</span></a></li></ol></div>
             
 
           </div>
