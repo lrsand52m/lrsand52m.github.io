@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[异常]]></title>
+    <url>%2F2019%2F01%2F22%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[一探多态]]></title>
     <url>%2F2019%2F01%2F14%2F</url>
     <content type="text"></content>
@@ -8,7 +13,7 @@
   <entry>
     <title><![CDATA[C++继承]]></title>
     <url>%2F2019%2F01%2F10%2F</url>
-    <content type="text"><![CDATA[编辑中…..]]></content>
+    <content type="text"><![CDATA[今天我们探讨一下C++特性之一: 继承]]></content>
       <categories>
         <category>C++</category>
       </categories>

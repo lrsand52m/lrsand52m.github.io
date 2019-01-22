@@ -4,23 +4,8 @@
 
     
   <url>
-    <loc>http://yoursite.com/2019/01/14/</loc>
-    <lastmod>2019-01-14T02:41:48.630Z</lastmod>
-    <data>
-        <display>
-        <title>一探多态</title>
-        <pubTime>2019-01-14T02:41:48.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://yoursite.com/2019/01/10/</loc>
-    <lastmod>2019-01-10T10:16:31.940Z</lastmod>
+    <lastmod>2019-01-22T12:25:54.957Z</lastmod>
     <data>
         <display>
         <title>C++继承</title>
@@ -33,6 +18,36 @@
              
               <breadCrumb title="C++" url="http://yoursite.com/categories/C/"/>
           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2019/01/22/</loc>
+    <lastmod>2019-01-22T12:23:44.599Z</lastmod>
+    <data>
+        <display>
+        <title>异常</title>
+        <pubTime>2019-01-22T12:23:44.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2019/01/14/</loc>
+    <lastmod>2019-01-14T02:41:48.630Z</lastmod>
+    <data>
+        <display>
+        <title>一探多态</title>
+        <pubTime>2019-01-14T02:41:48.000Z</pubTime>
+        
+         
+           
         </display>
     </data>
     </url>
