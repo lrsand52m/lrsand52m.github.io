@@ -49,9 +49,9 @@
     <link href="http://yoursite.com/2019/01/10/"/>
     <id>http://yoursite.com/2019/01/10/</id>
     <published>2019-01-10T10:14:32.000Z</published>
-    <updated>2019-01-22T12:25:54.957Z</updated>
+    <updated>2019-01-22T13:46:42.466Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="今天我们探讨一下C-特性之一-继承"><a href="#今天我们探讨一下C-特性之一-继承" class="headerlink" title="今天我们探讨一下C++特性之一: 继承"></a><strong>今天我们探讨一下C++特性之一: 继承</strong></h3><a id="more"></a>]]></content>
+    <content type="html"><![CDATA[<h3 id="今天我们探讨一下C-特性之一-继承"><a href="#今天我们探讨一下C-特性之一-继承" class="headerlink" title="今天我们探讨一下C++特性之一: 继承"></a><strong>今天我们探讨一下C++特性之一: 继承</strong></h3><a id="more"></a><p>说到继承，我原以为这是一个高大上的东西，到我了解完之后，我发现懒人创造世界这个理论是一点都没错：这只是一种类层次的代码复用的手段。并且为了广大程序猿能够好好偷懒，在这个本就是为了方便的继承机制上添加了一些防止大家用的不愉快的优化措施。  </p><h1 id="继承的方法"><a href="#继承的方法" class="headerlink" title="继承的方法"></a>继承的方法</h1><p>继承很简单，定义一个类时在后面加上冒号和你要继承的类就好了~<br>继承后父类的Person的成员（成员函数+成员变量）都会变成子类的一部分。<br>等等！！这是不是太简单了些？<br>简单？（naive）    </p><table><thead><tr><th style="text-align:center">继承方法/成员</th><th style="text-align:center">public继承</th><th style="text-align:center">protected继承</th><th style="text-align:center">private继承</th></tr></thead><tbody><tr><td style="text-align:center">基类的public</td><td style="text-align:center">子类的public成员</td><td style="text-align:center">子类的protected成员</td><td style="text-align:center">子类的private成员</td></tr><tr><td style="text-align:center">基类的protected</td><td style="text-align:center">子类的protected</td><td style="text-align:center">子类的protected成员</td><td style="text-align:center">子类的private成员</td></tr><tr><td style="text-align:center">基类的private</td><td style="text-align:center">不可见</td><td style="text-align:center">不可见</td><td style="text-align:center">不可见</td></tr></tbody></table>]]></content>
     
     <summary type="html">
     

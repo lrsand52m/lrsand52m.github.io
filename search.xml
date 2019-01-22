@@ -13,7 +13,7 @@
   <entry>
     <title><![CDATA[C++继承]]></title>
     <url>%2F2019%2F01%2F10%2F</url>
-    <content type="text"><![CDATA[今天我们探讨一下C++特性之一: 继承]]></content>
+    <content type="text"><![CDATA[今天我们探讨一下C++特性之一: 继承 说到继承，我原以为这是一个高大上的东西，到我了解完之后，我发现懒人创造世界这个理论是一点都没错：这只是一种类层次的代码复用的手段。并且为了广大程序猿能够好好偷懒，在这个本就是为了方便的继承机制上添加了一些防止大家用的不愉快的优化措施。 继承的方法继承很简单，定义一个类时在后面加上冒号和你要继承的类就好了~继承后父类的Person的成员（成员函数+成员变量）都会变成子类的一部分。等等！！这是不是太简单了些？简单？（naive） 继承方法/成员 public继承 protected继承 private继承 基类的public 子类的public成员 子类的protected成员 子类的private成员 基类的protected 子类的protected 子类的protected成员 子类的private成员 基类的private 不可见 不可见 不可见]]></content>
       <categories>
         <category>C++</category>
       </categories>
