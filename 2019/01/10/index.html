@@ -103,7 +103,7 @@
 <meta property="og:site_name" content="LRS&#39;s Blog">
 <meta property="og:description" content="今天我们探讨一下C++特性之一: 继承">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-23T02:27:57.838Z">
+<meta property="og:updated_time" content="2019-01-23T02:32:36.699Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++继承">
 <meta name="twitter:description" content="今天我们探讨一下C++特性之一: 继承">
@@ -405,7 +405,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,443 字
+                  1,450 字
                 </span>
               
 
@@ -493,7 +493,7 @@
 <li>需要注意的是如果是成员函数的隐藏，只需要函数名相同就构成隐藏。也就是说就算参数不一致也算隐藏哦。</li>
 <li>注意在实际中在继承体系里面最好不要定义同名的成员。没人会想弄出来一个用起来很别扭的类吧。。。  </li>
 </ol>
-<h2 id="子类继承的财富"><a href="#子类继承的财富" class="headerlink" title="子类继承的财富"></a>子类继承的财富</h2><p>既然存在父子的转换，那就说明子类不仅继承了父类的成员和函数还有一些其他的东西。。</p>
+<h2 id="爸爸教会的技能"><a href="#爸爸教会的技能" class="headerlink" title="爸爸教会的技能"></a>爸爸教会的技能</h2><p>既然存在父子的转换，那就说明子类不仅继承了父类的成员和函数还有一些其他的东西。。</p>
 <ol>
 <li>派生类的构造函数必须调用基类的构造函数初始化基类的那一部分成员。如果基类没有默认的构造函<br>数，则必须在派生类构造函数的初始化列表阶段显示调用。</li>
 <li>派生类的拷贝构造函数必须调用基类的拷贝构造完成基类的拷贝初始化。</li>
@@ -504,7 +504,7 @@
 </ol>
 <h2 id="爸爸的朋友不是我的朋友"><a href="#爸爸的朋友不是我的朋友" class="headerlink" title="爸爸的朋友不是我的朋友"></a>爸爸的朋友不是我的朋友</h2><p><strong>友元关系不能继承</strong>，也就是说基类友元不能访问子类私有和保护成员,这个其实很容易理解：毕竟父子是独立的嘛！  </p>
 <h2 id="爸爸的传家宝：static成员"><a href="#爸爸的传家宝：static成员" class="headerlink" title="爸爸的传家宝：static成员"></a>爸爸的传家宝：static成员</h2><p>说到成员会被继承就不得不说这个特殊的成员：静态成员<br>值得注意的是：<strong>基类定义了static静态成员，则整个继承体系里面只有一个这样的成员</strong>。无论派生出多少个子类，都只有一个static成员实例。<br>嗯。。。这样就可以轻松算出这个家族有过多少对象了呢~</p>
-
+<h2 id="近亲婚姻的烦恼。。。"><a href="#近亲婚姻的烦恼。。。" class="headerlink" title="近亲婚姻的烦恼。。。"></a>近亲婚姻的烦恼。。。</h2>
       
     </div>
     
@@ -925,7 +925,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#今天我们探讨一下C-特性之一-继承"><span class="nav-number">1.</span> <span class="nav-text">今天我们探讨一下C++特性之一: 继承</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#继承的方法"><span class="nav-number"></span> <span class="nav-text">继承的方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#继承之后…"><span class="nav-number"></span> <span class="nav-text">继承之后…</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#父子转换"><span class="nav-number"></span> <span class="nav-text">父子转换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#子类成家立业（子类独立）"><span class="nav-number"></span> <span class="nav-text">子类成家立业（子类独立）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#子类继承的财富"><span class="nav-number"></span> <span class="nav-text">子类继承的财富</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#爸爸的朋友不是我的朋友"><span class="nav-number"></span> <span class="nav-text">爸爸的朋友不是我的朋友</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#爸爸的传家宝：static成员"><span class="nav-number"></span> <span class="nav-text">爸爸的传家宝：static成员</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#今天我们探讨一下C-特性之一-继承"><span class="nav-number">1.</span> <span class="nav-text">今天我们探讨一下C++特性之一: 继承</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#继承的方法"><span class="nav-number"></span> <span class="nav-text">继承的方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#继承之后…"><span class="nav-number"></span> <span class="nav-text">继承之后…</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#父子转换"><span class="nav-number"></span> <span class="nav-text">父子转换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#子类成家立业（子类独立）"><span class="nav-number"></span> <span class="nav-text">子类成家立业（子类独立）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#爸爸教会的技能"><span class="nav-number"></span> <span class="nav-text">爸爸教会的技能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#爸爸的朋友不是我的朋友"><span class="nav-number"></span> <span class="nav-text">爸爸的朋友不是我的朋友</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#爸爸的传家宝：static成员"><span class="nav-number"></span> <span class="nav-text">爸爸的传家宝：static成员</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#近亲婚姻的烦恼。。。"><span class="nav-number"></span> <span class="nav-text">近亲婚姻的烦恼。。。</span></a></div>
             
 
           </div>
