@@ -49,17 +49,13 @@
     <link href="http://yoursite.com/2019/01/14/"/>
     <id>http://yoursite.com/2019/01/14/</id>
     <published>2019-01-14T02:41:48.000Z</published>
-    <updated>2019-01-23T02:46:45.085Z</updated>
+    <updated>2019-01-23T02:49:17.864Z</updated>
     
-    <content type="html"><![CDATA[<p>编辑中。。。<br>&lt;!–more__&gt;</p>]]></content>
+    <content type="html"><![CDATA[<p>编辑中。。。<br><a id="more"></a></p>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;p&gt;编辑中。。。&lt;br&gt;&amp;lt;!–more__&amp;gt;&lt;/p&gt;
-
-      
+      &lt;p&gt;编辑中。。。&lt;br&gt;
     
     </summary>
     
