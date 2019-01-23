@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-01-23T02:45:57.435Z</updated>
+  <updated>2019-01-23T02:51:41.016Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,12 +21,20 @@
     <link href="http://yoursite.com/2019/01/23/"/>
     <id>http://yoursite.com/2019/01/23/</id>
     <published>2019-01-23T02:45:57.000Z</published>
-    <updated>2019-01-23T02:45:57.435Z</updated>
+    <updated>2019-01-23T02:51:41.016Z</updated>
+    
+    <content type="html"><![CDATA[<p>编辑中。。。<br><a id="more"></a></p>]]></content>
     
     <summary type="html">
     
+      &lt;p&gt;编辑中。。。&lt;br&gt;
+    
     </summary>
     
+      <category term="C++" scheme="http://yoursite.com/categories/C/"/>
+    
+    
+      <category term="指针" scheme="http://yoursite.com/tags/%E6%8C%87%E9%92%88/"/>
     
   </entry>
   
