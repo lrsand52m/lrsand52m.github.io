@@ -103,7 +103,7 @@
 <meta property="og:site_name" content="LRS&#39;s Blog">
 <meta property="og:description" content="今天我们探讨一下C++特性之一: 继承">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-22T13:46:42.466Z">
+<meta property="og:updated_time" content="2019-01-23T02:27:57.838Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="C++继承">
 <meta name="twitter:description" content="今天我们探讨一下C++特性之一: 继承">
@@ -405,7 +405,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  259 字
+                  1,443 字
                 </span>
               
 
@@ -421,7 +421,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1 分钟
+                  5 分钟
                 </span>
               
             </div>
@@ -478,6 +478,32 @@
 </tr>
 </tbody>
 </table>
+<p>哦  那是不是在要继承的类前面加上继承方式就可以轻松搞定呢？<br>答案是肯定的，但是要注意的一点就是基类的private成员无论怎么继承在子类里面都不可见（但是却消耗内存），多么难受！而实际情况就是：人们一般都是只使用public继承，极少用到protected和private继承。  </p>
+<h1 id="继承之后…"><a href="#继承之后…" class="headerlink" title="继承之后…"></a>继承之后…</h1><h2 id="父子转换"><a href="#父子转换" class="headerlink" title="父子转换"></a>父子转换</h2><p>既然有了继承这个概念之后，那么这个偷懒的产物也肯定给了基类和子类一个关系：基类与子类的复制转换   </p>
+<ul>
+<li>派生类对象可以赋值给基类的对象/基类的指针/基类的引用。这里有个形象的说法叫切片或者切割。寓意把派生类中父类那部分切来赋值过去。</li>
+<li>基类对象不能赋值给派生类对象，这个容易理解：只有把蛋糕切少的，还没有把蛋糕越切越多的。。。</li>
+<li>基类的指针可以通过强制类型转换赋值给派生类的指针。但是必须是基类的指针是指向派生类对象时才是安全的。这里基类如果是多态类型，可以使用RTTI(Run-Time Type Information)的dynamic_cast来进行识别后进行安全转换。</li>
+<li>基类的指针可以通过强制类型转换赋值给派生类的指针,但是之后你得注意不要越界了~  </li>
+</ul>
+<h2 id="子类成家立业（子类独立）"><a href="#子类成家立业（子类独立）" class="headerlink" title="子类成家立业（子类独立）"></a>子类成家立业（子类独立）</h2><p>虽然是继承而来，但是基类和子类终究是两个类。子类也会有他自己的想法~  </p>
+<ol>
+<li>在继承体系中基类和派生类都有独立的作用域。毕竟不在一个大括号了。</li>
+<li>去找父亲办事，但是只有儿子的电话怎么办？简单！让儿子告诉你他父亲的电话。子类和父类中有同名成员，子类成员将屏蔽父类对同名成员的直接访问，这种情况叫隐藏，也叫重定义。（在子类成员函数中，可以使用基类::基类成员显示访问）</li>
+<li>需要注意的是如果是成员函数的隐藏，只需要函数名相同就构成隐藏。也就是说就算参数不一致也算隐藏哦。</li>
+<li>注意在实际中在继承体系里面最好不要定义同名的成员。没人会想弄出来一个用起来很别扭的类吧。。。  </li>
+</ol>
+<h2 id="子类继承的财富"><a href="#子类继承的财富" class="headerlink" title="子类继承的财富"></a>子类继承的财富</h2><p>既然存在父子的转换，那就说明子类不仅继承了父类的成员和函数还有一些其他的东西。。</p>
+<ol>
+<li>派生类的构造函数必须调用基类的构造函数初始化基类的那一部分成员。如果基类没有默认的构造函<br>数，则必须在派生类构造函数的初始化列表阶段显示调用。</li>
+<li>派生类的拷贝构造函数必须调用基类的拷贝构造完成基类的拷贝初始化。</li>
+<li>派生类的operator=必须要调用基类的operator=完成基类的复制。</li>
+<li>派生类的析构函数会在被调用完成后自动调用基类的析构函数清理基类成员。因为这样才能保证派生类<br>对象先清理派生类成员再清理基类成员的顺序。</li>
+<li>派生类对象初始化先调用基类构造再调派生类构造。</li>
+<li>派生类对象析构清理先调用派生类析构再调基类的析构。<br>明白了以上几点之后，我们知道了一个子类是怎么创造并且销毁的了：<br>基类构造-&gt;派生类构造-&gt;。。。-&gt;派生类析构-&gt;基类析构<br>利用这点我们可以利用构造函数的私有化使这个类无法被继承！当然了，喜欢偷懒的你一定会发现定义类时用final修饰之后这个类就无法被继承了。   </li>
+</ol>
+<h2 id="爸爸的朋友不是我的朋友"><a href="#爸爸的朋友不是我的朋友" class="headerlink" title="爸爸的朋友不是我的朋友"></a>爸爸的朋友不是我的朋友</h2><p><strong>友元关系不能继承</strong>，也就是说基类友元不能访问子类私有和保护成员,这个其实很容易理解：毕竟父子是独立的嘛！  </p>
+<h2 id="爸爸的传家宝：static成员"><a href="#爸爸的传家宝：static成员" class="headerlink" title="爸爸的传家宝：static成员"></a>爸爸的传家宝：static成员</h2><p>说到成员会被继承就不得不说这个特殊的成员：静态成员<br>值得注意的是：<strong>基类定义了static静态成员，则整个继承体系里面只有一个这样的成员</strong>。无论派生出多少个子类，都只有一个static成员实例。<br>嗯。。。这样就可以轻松算出这个家族有过多少对象了呢~</p>
 
       
     </div>
@@ -899,7 +925,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#今天我们探讨一下C-特性之一-继承"><span class="nav-number">1.</span> <span class="nav-text">今天我们探讨一下C++特性之一: 继承</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#继承的方法"><span class="nav-number"></span> <span class="nav-text">继承的方法</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#今天我们探讨一下C-特性之一-继承"><span class="nav-number">1.</span> <span class="nav-text">今天我们探讨一下C++特性之一: 继承</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#继承的方法"><span class="nav-number"></span> <span class="nav-text">继承的方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#继承之后…"><span class="nav-number"></span> <span class="nav-text">继承之后…</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#父子转换"><span class="nav-number"></span> <span class="nav-text">父子转换</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#子类成家立业（子类独立）"><span class="nav-number"></span> <span class="nav-text">子类成家立业（子类独立）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#子类继承的财富"><span class="nav-number"></span> <span class="nav-text">子类继承的财富</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#爸爸的朋友不是我的朋友"><span class="nav-number"></span> <span class="nav-text">爸爸的朋友不是我的朋友</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#爸爸的传家宝：static成员"><span class="nav-number"></span> <span class="nav-text">爸爸的传家宝：static成员</span></a></div>
             
 
           </div>
@@ -934,7 +960,7 @@
     
       <span class="post-meta-item-text">全站字数&#58;</span>
     
-    <span title="全站字数">49.7k</span>
+    <span title="全站字数">50.8k</span>
   
 </div>
 <div class="powered-by">
