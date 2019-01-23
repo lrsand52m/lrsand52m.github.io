@@ -14,7 +14,13 @@
   <entry>
     <title><![CDATA[异常]]></title>
     <url>%2F2019%2F01%2F22%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[编辑中。。。]]></content>
+      <categories>
+        <category>C++</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[一探多态]]></title>

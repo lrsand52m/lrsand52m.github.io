@@ -43,12 +43,20 @@
     <link href="http://yoursite.com/2019/01/22/"/>
     <id>http://yoursite.com/2019/01/22/</id>
     <published>2019-01-22T12:23:44.000Z</published>
-    <updated>2019-01-22T12:23:44.599Z</updated>
+    <updated>2019-01-23T02:53:08.991Z</updated>
+    
+    <content type="html"><![CDATA[<p>编辑中。。。<br><a id="more"></a></p>]]></content>
     
     <summary type="html">
     
+      &lt;p&gt;编辑中。。。&lt;br&gt;
+    
     </summary>
     
+      <category term="C++" scheme="http://yoursite.com/categories/C/"/>
+    
+    
+      <category term="C++" scheme="http://yoursite.com/tags/C/"/>
     
   </entry>
   
