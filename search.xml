@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[这个指针有自己的想法——智能指针]]></title>
+    <url>%2F2019%2F01%2F23%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
     <title><![CDATA[异常]]></title>
     <url>%2F2019%2F01%2F22%2F</url>
     <content type="text"></content>
@@ -8,7 +13,13 @@
   <entry>
     <title><![CDATA[一探多态]]></title>
     <url>%2F2019%2F01%2F14%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[编辑中。。。&lt;!–more__&gt;]]></content>
+      <categories>
+        <category>C++</category>
+      </categories>
+      <tags>
+        <tag>C++</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[C++继承]]></title>
