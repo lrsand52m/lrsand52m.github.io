@@ -65,9 +65,9 @@
     <link href="http://yoursite.com/2019/01/14/"/>
     <id>http://yoursite.com/2019/01/14/</id>
     <published>2019-01-14T02:41:48.000Z</published>
-    <updated>2019-01-23T10:05:53.825Z</updated>
+    <updated>2019-01-23T10:10:32.370Z</updated>
     
-    <content type="html"><![CDATA[<p>讲完了之前的继承，我们现在再来看一看便(偷)捷(懒)的新花样：多态<br><a id="more"></a></p>]]></content>
+    <content type="html"><![CDATA[<p>讲完了之前的继承，我们现在再来看一看便(偷)捷(懒)的新花样：多态<br><a id="more"></a></p><h1 id="多态之前"><a href="#多态之前" class="headerlink" title="多态之前"></a>多态之前</h1>]]></content>
     
     <summary type="html">
     
