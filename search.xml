@@ -25,7 +25,7 @@
   <entry>
     <title><![CDATA[一探多态]]></title>
     <url>%2F2019%2F01%2F14%2F</url>
-    <content type="text"><![CDATA[编辑中。。。]]></content>
+    <content type="text"><![CDATA[讲完了之前的继承，我们现在再来看一看便(偷)捷(懒)的新花样：多态]]></content>
       <categories>
         <category>C++</category>
       </categories>

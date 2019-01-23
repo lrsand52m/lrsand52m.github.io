@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://yoursite.com/2019/01/14/</loc>
+    <lastmod>2019-01-23T10:05:53.825Z</lastmod>
+    <data>
+        <display>
+        <title>一探多态</title>
+        <pubTime>2019-01-14T02:41:48.000Z</pubTime>
+        
+        <tag>C++</tag>
+         
+         
+           
+             
+              <breadCrumb title="C++" url="http://yoursite.com/categories/C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2019/01/22/</loc>
     <lastmod>2019-01-23T02:53:08.991Z</lastmod>
     <data>
@@ -32,26 +52,6 @@
         <pubTime>2019-01-23T02:45:57.000Z</pubTime>
         
         <tag>指针</tag>
-         
-         
-           
-             
-              <breadCrumb title="C++" url="http://yoursite.com/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2019/01/14/</loc>
-    <lastmod>2019-01-23T02:49:17.864Z</lastmod>
-    <data>
-        <display>
-        <title>一探多态</title>
-        <pubTime>2019-01-14T02:41:48.000Z</pubTime>
-        
-        <tag>C++</tag>
          
          
            
