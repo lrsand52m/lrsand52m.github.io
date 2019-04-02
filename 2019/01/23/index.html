@@ -103,7 +103,7 @@
 <meta property="og:site_name" content="LRS&#39;s Blog">
 <meta property="og:description" content="这次我们说一说C++里面防止程序员因为忘记释放资源而造成内存泄漏机制：RAII">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-02T05:03:18.275Z">
+<meta property="og:updated_time" content="2019-04-02T05:26:21.522Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="这个指针有自己的想法——智能指针">
 <meta name="twitter:description" content="这次我们说一说C++里面防止程序员因为忘记释放资源而造成内存泄漏机制：RAII">
@@ -405,7 +405,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  200 字
+                  566 字
                 </span>
               
 
@@ -421,7 +421,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  1 分钟
+                  2 分钟
                 </span>
               
             </div>
@@ -451,6 +451,34 @@
 <li>不需要显式地释放资源。  </li>
 <li>采用这种方式，对象所需的资源在其生命期内始终保持有效。</li>
 </ul>
+<p>说起来复杂，但是也就是这么一回事：利用一个行为很像指针的对象帮你保管资源，同时当出了对象作用域时，会自动帮你释放之。<br>也就是说，虽然智能指针叫做指针，但不是一个真正的指针：是一个对象，但是你可以使用操控指针的语句来操控这个对象。<br>这样一来，简直是程序猿福音啊：再也不怕在申请资源和释放资源中间程序抛异常了：出了作用域会自动释放。<br>再一想，其实相同的思路也可以用来控制锁，那么基于RAII的守卫锁也就应运而生了。<br>接下来我们看看有哪些智能指针吧：  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">指针名</th>
+<th style="text-align:center">优点</th>
+<th style="text-align:center">缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">auto_ptr</td>
+<td style="text-align:center">实现简单</td>
+<td style="text-align:center">不安全，进行复制后会有指针悬空现象</td>
+</tr>
+<tr>
+<td style="text-align:center">unique_ptr</td>
+<td style="text-align:center">简单粗暴且安全</td>
+<td style="text-align:center">无法拷贝，仅能进行所有权转移</td>
+</tr>
+<tr>
+<td style="text-align:center">shared_ptr</td>
+<td style="text-align:center">安全，并且能拷贝</td>
+<td style="text-align:center">为了解决循环引用问题，必须借助weak_ptr实现完整功能</td>
+</tr>
+</tbody>
+</table>
+<h1 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h1><p>这里仅贴出unique_ptr代码（因为本人最爱用这个）：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;classT&gt;</span><br><span class="line">classUniquePtr</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">  UniquePtr(T*ptr=<span class="literal">nullptr</span>)</span><br><span class="line">  :_ptr(ptr)</span><br><span class="line">  &#123;&#125;</span><br><span class="line">    ~UniquePtr()</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="keyword">if</span>(_ptr)</span><br><span class="line">      delete_ptr;</span><br><span class="line">    &#125;</span><br><span class="line">    T&amp;<span class="keyword">operator</span>*()</span><br><span class="line">     &#123;</span><br><span class="line">       <span class="keyword">return</span>*_ptr;</span><br><span class="line">     &#125;</span><br><span class="line">    T*<span class="keyword">operator</span>-&gt;()</span><br><span class="line">     &#123;</span><br><span class="line">       return_ptr;</span><br><span class="line">     &#125;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line"><span class="comment">// C++11防拷贝的方式：delete</span></span><br><span class="line">    UniquePtr(UniquePtr&lt;T&gt;<span class="keyword">const</span>&amp;)=<span class="keyword">delete</span>;</span><br><span class="line">    UniquePtr&amp;<span class="keyword">operator</span>=(UniquePtr&lt;T&gt;<span class="keyword">const</span>&amp;)=<span class="keyword">delete</span>;</span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    T*_ptr;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -868,7 +896,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#这次我们说一说C-里面防止程序员因为忘记释放资源而造成内存泄漏机制：RAII"><span class="nav-number">1.</span> <span class="nav-text">这次我们说一说C++里面防止程序员因为忘记释放资源而造成内存泄漏机制：RAII</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#啥是RAII"><span class="nav-number"></span> <span class="nav-text">啥是RAII</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#这次我们说一说C-里面防止程序员因为忘记释放资源而造成内存泄漏机制：RAII"><span class="nav-number">1.</span> <span class="nav-text">这次我们说一说C++里面防止程序员因为忘记释放资源而造成内存泄漏机制：RAII</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#啥是RAII"><span class="nav-number"></span> <span class="nav-text">啥是RAII</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#实现"><span class="nav-number"></span> <span class="nav-text">实现</span></a></div>
             
 
           </div>
@@ -903,7 +931,7 @@
     
       <span class="post-meta-item-text">全站字数&#58;</span>
     
-    <span title="全站字数">53.0k</span>
+    <span title="全站字数">53.3k</span>
   
 </div>
 <div class="powered-by">
