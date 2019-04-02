@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[这个指针有自己的想法——智能指针]]></title>
     <url>%2F2019%2F01%2F23%2F</url>
-    <content type="text"><![CDATA[编辑中。。。]]></content>
+    <content type="text"><![CDATA[这次我们说一说C++里面防止程序员因为忘记释放资源而造成内存泄漏机制：RAII 啥是RAIIRAII（Resource Acquisition Is Initialization）是一种利用对象生命周期来控制程序资源（如内存、文件句柄、网络连接、互斥量等等）的简单技术在对象构造时获取资源，接着控制对资源的访问使之在对象的生命周期内始终保持有效，最后在对象析构的时候释放资源。借此，我们实际上把管理一份资源的责任托管给了一个对象。这种做法有两大好处： 不需要显式地释放资源。 采用这种方式，对象所需的资源在其生命期内始终保持有效。]]></content>
       <categories>
         <category>C++</category>
       </categories>

@@ -95,18 +95,18 @@
 
 
 
-<meta name="description" content="编辑中。。。">
+<meta name="description" content="这次我们说一说C++里面防止程序员因为忘记释放资源而造成内存泄漏机制：RAII">
 <meta name="keywords" content="指针">
 <meta property="og:type" content="article">
 <meta property="og:title" content="这个指针有自己的想法——智能指针">
 <meta property="og:url" content="http://yoursite.com/2019/01/23/index.html">
 <meta property="og:site_name" content="LRS&#39;s Blog">
-<meta property="og:description" content="编辑中。。。">
+<meta property="og:description" content="这次我们说一说C++里面防止程序员因为忘记释放资源而造成内存泄漏机制：RAII">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-23T02:51:41.016Z">
+<meta property="og:updated_time" content="2019-04-02T05:03:18.275Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="这个指针有自己的想法——智能指针">
-<meta name="twitter:description" content="编辑中。。。">
+<meta name="twitter:description" content="这次我们说一说C++里面防止程序员因为忘记释放资源而造成内存泄漏机制：RAII">
 
 
 
@@ -405,7 +405,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  3 字
+                  200 字
                 </span>
               
 
@@ -445,7 +445,12 @@
       
 
       
-        <p>编辑中。。。<br><a id="more"></a></p>
+        <h4 id="这次我们说一说C-里面防止程序员因为忘记释放资源而造成内存泄漏机制：RAII"><a href="#这次我们说一说C-里面防止程序员因为忘记释放资源而造成内存泄漏机制：RAII" class="headerlink" title="这次我们说一说C++里面防止程序员因为忘记释放资源而造成内存泄漏机制：RAII"></a>这次我们说一说C++里面防止程序员因为忘记释放资源而造成内存泄漏机制：RAII</h4><a id="more"></a>
+<h1 id="啥是RAII"><a href="#啥是RAII" class="headerlink" title="啥是RAII"></a>啥是RAII</h1><p>RAII（Resource Acquisition Is Initialization）<strong>是一种利用对象生命周期来控制程序资源（如内存、文件句柄、网络连接、互斥量等等）的简单技术</strong><br>在<strong>对象构造时获取资源</strong>，接着控制对资源的访问使之在对象的生命周期内始终保持有效，最后<strong>在对象析构的时候释放资源</strong>。借此，我们实际上把管理一份资源的责任托管给了一个对象。这种做法有两大好处：  </p>
+<ul>
+<li>不需要显式地释放资源。  </li>
+<li>采用这种方式，对象所需的资源在其生命期内始终保持有效。</li>
+</ul>
 
       
     </div>
@@ -605,8 +610,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -845,6 +859,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#这次我们说一说C-里面防止程序员因为忘记释放资源而造成内存泄漏机制：RAII"><span class="nav-number">1.</span> <span class="nav-text">这次我们说一说C++里面防止程序员因为忘记释放资源而造成内存泄漏机制：RAII</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#啥是RAII"><span class="nav-number"></span> <span class="nav-text">啥是RAII</span></a></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -873,7 +903,7 @@
     
       <span class="post-meta-item-text">全站字数&#58;</span>
     
-    <span title="全站字数">52.8k</span>
+    <span title="全站字数">53.0k</span>
   
 </div>
 <div class="powered-by">

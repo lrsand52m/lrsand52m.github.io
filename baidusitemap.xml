@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://yoursite.com/2019/01/23/</loc>
+    <lastmod>2019-04-02T05:03:18.275Z</lastmod>
+    <data>
+        <display>
+        <title>这个指针有自己的想法——智能指针</title>
+        <pubTime>2019-01-23T02:45:57.000Z</pubTime>
+        
+        <tag>指针</tag>
+         
+         
+           
+             
+              <breadCrumb title="C++" url="http://yoursite.com/categories/C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2019/01/22/</loc>
     <lastmod>2019-02-12T08:24:09.650Z</lastmod>
     <data>
@@ -32,26 +52,6 @@
         <pubTime>2019-01-14T02:41:48.000Z</pubTime>
         
         <tag>C++</tag>
-         
-         
-           
-             
-              <breadCrumb title="C++" url="http://yoursite.com/categories/C/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2019/01/23/</loc>
-    <lastmod>2019-01-23T02:51:41.016Z</lastmod>
-    <data>
-        <display>
-        <title>这个指针有自己的想法——智能指针</title>
-        <pubTime>2019-01-23T02:45:57.000Z</pubTime>
-        
-        <tag>指针</tag>
          
          
            

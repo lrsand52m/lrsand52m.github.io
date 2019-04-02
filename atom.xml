@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-01-23T02:51:41.016Z</updated>
+  <updated>2019-04-02T05:03:18.275Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,13 +21,13 @@
     <link href="http://yoursite.com/2019/01/23/"/>
     <id>http://yoursite.com/2019/01/23/</id>
     <published>2019-01-23T02:45:57.000Z</published>
-    <updated>2019-01-23T02:51:41.016Z</updated>
+    <updated>2019-04-02T05:03:18.275Z</updated>
     
-    <content type="html"><![CDATA[<p>编辑中。。。<br><a id="more"></a></p>]]></content>
+    <content type="html"><![CDATA[<h4 id="这次我们说一说C-里面防止程序员因为忘记释放资源而造成内存泄漏机制：RAII"><a href="#这次我们说一说C-里面防止程序员因为忘记释放资源而造成内存泄漏机制：RAII" class="headerlink" title="这次我们说一说C++里面防止程序员因为忘记释放资源而造成内存泄漏机制：RAII"></a>这次我们说一说C++里面防止程序员因为忘记释放资源而造成内存泄漏机制：RAII</h4><a id="more"></a><h1 id="啥是RAII"><a href="#啥是RAII" class="headerlink" title="啥是RAII"></a>啥是RAII</h1><p>RAII（Resource Acquisition Is Initialization）<strong>是一种利用对象生命周期来控制程序资源（如内存、文件句柄、网络连接、互斥量等等）的简单技术</strong><br>在<strong>对象构造时获取资源</strong>，接着控制对资源的访问使之在对象的生命周期内始终保持有效，最后<strong>在对象析构的时候释放资源</strong>。借此，我们实际上把管理一份资源的责任托管给了一个对象。这种做法有两大好处：  </p><ul><li>不需要显式地释放资源。  </li><li>采用这种方式，对象所需的资源在其生命期内始终保持有效。</li></ul>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;编辑中。。。&lt;br&gt;
+      &lt;h4 id=&quot;这次我们说一说C-里面防止程序员因为忘记释放资源而造成内存泄漏机制：RAII&quot;&gt;&lt;a href=&quot;#这次我们说一说C-里面防止程序员因为忘记释放资源而造成内存泄漏机制：RAII&quot; class=&quot;headerlink&quot; title=&quot;这次我们说一说C++里面防止程序员因为忘记释放资源而造成内存泄漏机制：RAII&quot;&gt;&lt;/a&gt;这次我们说一说C++里面防止程序员因为忘记释放资源而造成内存泄漏机制：RAII&lt;/h4&gt;
     
     </summary>
     
