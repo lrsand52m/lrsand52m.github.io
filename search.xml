@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[IO多路转接]]></title>
+    <url>%2F2019%2F04%2F02%2F</url>
+    <content type="text"><![CDATA[编辑中。。。]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[这个指针有自己的想法——智能指针]]></title>
     <url>%2F2019%2F01%2F23%2F</url>
     <content type="text"><![CDATA[这次我们说一说C++里面防止程序员因为忘记释放资源而造成内存泄漏机制：RAII 啥是RAIIRAII（Resource Acquisition Is Initialization）是一种利用对象生命周期来控制程序资源（如内存、文件句柄、网络连接、互斥量等等）的简单技术在对象构造时获取资源，接着控制对资源的访问使之在对象的生命周期内始终保持有效，最后在对象析构的时候释放资源。借此，我们实际上把管理一份资源的责任托管给了一个对象。这种做法有两大好处： 不需要显式地释放资源。 采用这种方式，对象所需的资源在其生命期内始终保持有效。 说起来复杂，但是也就是这么一回事：利用一个行为很像指针的对象帮你保管资源，同时当出了对象作用域时，会自动帮你释放之。也就是说，虽然智能指针叫做指针，但不是一个真正的指针：是一个对象，但是你可以使用操控指针的语句来操控这个对象。这样一来，简直是程序猿福音啊：再也不怕在申请资源和释放资源中间程序抛异常了：出了作用域会自动释放。再一想，其实相同的思路也可以用来控制锁，那么基于RAII的守卫锁也就应运而生了。接下来我们看看有哪些智能指针吧： 指针名 优点 缺点 auto_ptr 实现简单 不安全，进行复制后会有指针悬空现象 unique_ptr 简单粗暴且安全 无法拷贝，仅能进行所有权转移 shared_ptr 安全，并且能拷贝 为了解决循环引用问题，必须借助weak_ptr实现完整功能 实现这里仅贴出unique_ptr代码（因为本人最爱用这个）：123456789101112131415161718192021222324252627template&lt;classT&gt;classUniquePtr&#123;public: UniquePtr(T*ptr=nullptr) :_ptr(ptr) &#123;&#125; ~UniquePtr() &#123; if(_ptr) delete_ptr; &#125; T&amp;operator*() &#123; return*_ptr; &#125; T*operator-&gt;() &#123; return_ptr; &#125;private:// C++11防拷贝的方式：delete UniquePtr(UniquePtr&lt;T&gt;const&amp;)=delete; UniquePtr&amp;operator=(UniquePtr&lt;T&gt;const&amp;)=delete;private: T*_ptr;&#125;;]]></content>
